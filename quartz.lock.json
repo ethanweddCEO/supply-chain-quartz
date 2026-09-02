@@ -7,6 +7,18 @@
       "commit": "06ea3d8e206f0edaab08556191adc75b2403e832",
       "installedAt": "2026-09-02T06:09:46.475Z"
     },
+    "quartz-themes": {
+      "source": {
+        "name": "quartz-themes",
+        "repo": "github:saberzero1/quartz-themes",
+        "subdir": "plugin",
+        "ref": "main"
+      },
+      "resolved": "https://github.com/saberzero1/quartz-themes.git",
+      "commit": "44dd81094c0dd982b67f93d91ef8c80da3f583e6",
+      "subdir": "plugin",
+      "installedAt": "2026-09-02T06:12:21.370Z"
+    },
     "supply-chain-quartz": {
       "source": "https://github.com/ethanweddCEO/supply-chain-quartz",
       "resolved": "https://github.com/ethanweddCEO/supply-chain-quartz",
