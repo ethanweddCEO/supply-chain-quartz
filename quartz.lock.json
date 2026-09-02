@@ -1,6 +1,12 @@
 {
   "version": "1.0.0",
   "plugins": {
+    "explorer": {
+      "source": "github:quartz-community/explorer",
+      "resolved": "https://github.com/quartz-community/explorer.git",
+      "commit": "06ea3d8e206f0edaab08556191adc75b2403e832",
+      "installedAt": "2026-09-02T06:09:46.475Z"
+    },
     "supply-chain-quartz": {
       "source": "https://github.com/ethanweddCEO/supply-chain-quartz",
       "resolved": "https://github.com/ethanweddCEO/supply-chain-quartz",
