@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: supplychain.github.io/quartz
+  baseUrl: ethanweddceo.github.io/supply-chain-quartz/
   ignorePatterns:
     - private
     - templates
@@ -277,6 +277,14 @@ plugins:
     enabled: true
     options: {}
     order: 50
+  - source:
+      name: quartz-themes
+      repo: github:saberzero1/quartz-themes
+      subdir: plugin
+      ref: main
+    enabled: true
+    order: 50
+    options: {}
 layout:
   groups:
     toolbar:
