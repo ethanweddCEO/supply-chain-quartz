@@ -7,7 +7,7 @@ configuration:
   analytics:
     provider: plausible
   locale: en-US
-  baseUrl: ethanweddceo.github.io/supply-chain-quartz/
+  baseUrl: ethanweddceo.github.io/supply-chain-quartz
   ignorePatterns:
     - private
     - templates
