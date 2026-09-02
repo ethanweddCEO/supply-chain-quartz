@@ -1,0 +1,4110 @@
+{
+  "meta": {
+    "version": "1.0.0",
+    "generated": "2025-10-30T15:11:33.867Z",
+    "generator": "space-gen"
+  },
+  "name": "Make.md Guide",
+  "path": "job_1761836438935_608d4a6b120a3ca8",
+  "definition": {
+    "defaultSticker": "emoji//1f4da",
+    "fullWidth": true,
+    "defaultColor": "#4CAF50"
+  },
+  "properties": {
+    "cover": "https://images.unsplash.com/photo-1760166699654-5d0e10f51994?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxtb2Rlcm4lMjBtaW5pbWFsaXN0JTIwbGlicmFyeSUyMHdpdGglMjBvcmdhbml6ZWQlMjBib29rcyUyMGFuZHxlbnwwfDB8fHwxNzYxODM3MDcxfDA&ixlib=rb-4.1.0&q=85&w=1920&q=80"
+  },
+  "context": {},
+  "frames": {
+    "main": {
+      "schema": {
+        "id": "main",
+        "name": "Make.md Guide",
+        "type": "frame",
+        "def": "{}",
+        "predicate": "",
+        "primary": ""
+      },
+      "cols": [
+        {
+          "name": "totalGuides",
+          "schemaId": "main",
+          "type": "aggregate",
+          "value": "{\"alias\":\"Total Guides\",\"field\":null,\"fn\":\"count\",\"schema\":\"files\",\"space\":\"./Tutorials\"}",
+          "hidden": "",
+          "attrs": "{\"icon\":\"emoji//1f4da\"}",
+          "unique": "",
+          "primary": ""
+        },
+        {
+          "name": "tutorialCount",
+          "schemaId": "main",
+          "type": "aggregate",
+          "value": "{\"alias\":\"Tutorials\",\"field\":null,\"fn\":\"count\",\"schema\":\"files\",\"space\":\"./Tutorials\"}",
+          "hidden": "",
+          "attrs": "{\"icon\":\"emoji//1f3af\"}",
+          "unique": "",
+          "primary": ""
+        },
+        {
+          "name": "referenceCount",
+          "schemaId": "main",
+          "type": "aggregate",
+          "value": "{\"alias\":\"Reference Docs\",\"field\":null,\"fn\":\"count\",\"schema\":\"files\",\"space\":\"./Reference\"}",
+          "hidden": "",
+          "attrs": "{\"icon\":\"emoji//1f4d6\"}",
+          "unique": "",
+          "primary": ""
+        },
+        {
+          "name": "gettingStartedCount",
+          "schemaId": "main",
+          "type": "aggregate",
+          "value": "{\"alias\":\"Getting Started\",\"field\":null,\"fn\":\"count\",\"schema\":\"files\",\"space\":\"./Getting Started\"}",
+          "hidden": "",
+          "attrs": "{\"icon\":\"emoji//1f680\"}",
+          "unique": "",
+          "primary": ""
+        },
+        {
+          "name": "completionRate",
+          "schemaId": "main",
+          "type": "fileprop",
+          "value": "{\"alias\":\"Completion\",\"value\":\"85\"}",
+          "hidden": "",
+          "attrs": "{\"icon\":\"emoji//2705\"}",
+          "unique": "",
+          "primary": ""
+        }
+      ],
+      "rows": [
+        {
+          "id": "main",
+          "schemaId": "main",
+          "parentId": "",
+          "name": "Make.md Guide",
+          "type": "group",
+          "rank": "0",
+          "props": "{\"totalGuides\":\"0\",\"tutorialCount\":\"0\",\"referenceCount\":\"0\",\"gettingStartedCount\":\"0\",\"completionRate\":\"\\\"0%\\\"\"}",
+          "styles": "{\"layout\":\"\\\"column\\\"\",\"gap\":\"32\"}"
+        },
+        {
+          "id": "container15",
+          "schemaId": "main",
+          "parentId": "main",
+          "name": "Search Section",
+          "type": "container",
+          "rank": "0",
+          "props": "{}",
+          "styles": "{\"layout\":\"\\\"column\\\"\",\"width\":\"\\\"100%\\\"\",\"gap\":\"16\",\"alignItems\":\"\\\"center\\\"\",\"marginBottom\":\"16\"}"
+        },
+        {
+          "id": "searchBar1",
+          "schemaId": "main",
+          "parentId": "container15",
+          "name": "searchBar",
+          "type": "group",
+          "rank": "0",
+          "props": "{\"placeholder\":\"\\\"Search documentation...\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"maxWidth\":\"\\\"600px\\\"\"}"
+        },
+        {
+          "id": "container16",
+          "schemaId": "main",
+          "parentId": "main",
+          "name": "Metrics Row",
+          "type": "group",
+          "rank": "1",
+          "props": "{}",
+          "styles": "{\"layout\":\"\\\"row\\\"\",\"width\":\"\\\"100%\\\"\",\"gap\":\"16\",\"justifyContent\":\"\\\"space-between\\\"\"}"
+        },
+        {
+          "id": "column20",
+          "schemaId": "main",
+          "parentId": "container16",
+          "name": "column",
+          "type": "column",
+          "rank": "0",
+          "props": "{}",
+          "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+        },
+        {
+          "id": "card24",
+          "schemaId": "main",
+          "parentId": "column20",
+          "name": "📚 Total Guides Card",
+          "type": "group",
+          "rank": "0",
+          "props": "{}",
+          "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"24px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+        },
+        {
+          "id": "text103",
+          "schemaId": "main",
+          "parentId": "card24",
+          "name": "text",
+          "type": "text",
+          "rank": "0",
+          "props": "{\"value\":\"\\\"📚\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"32px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+        },
+        {
+          "id": "text104",
+          "schemaId": "main",
+          "parentId": "card24",
+          "name": "text",
+          "type": "data",
+          "rank": "1",
+          "props": "{\"field\":\"$contexts.$properties['totalGuides']\",\"value\":\"main.props['totalGuides']\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+        },
+        {
+          "id": "text105",
+          "schemaId": "main",
+          "parentId": "card24",
+          "name": "text",
+          "type": "text",
+          "rank": "2",
+          "props": "{\"value\":\"\\\"Total Guides\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"14px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+        },
+        {
+          "id": "column21",
+          "schemaId": "main",
+          "parentId": "container16",
+          "name": "column",
+          "type": "column",
+          "rank": "1",
+          "props": "{}",
+          "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+        },
+        {
+          "id": "card25",
+          "schemaId": "main",
+          "parentId": "column21",
+          "name": "🎯 Tutorials Card",
+          "type": "group",
+          "rank": "0",
+          "props": "{}",
+          "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"24px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+        },
+        {
+          "id": "text106",
+          "schemaId": "main",
+          "parentId": "card25",
+          "name": "text",
+          "type": "text",
+          "rank": "0",
+          "props": "{\"value\":\"\\\"🎯\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"32px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+        },
+        {
+          "id": "text107",
+          "schemaId": "main",
+          "parentId": "card25",
+          "name": "text",
+          "type": "data",
+          "rank": "1",
+          "props": "{\"field\":\"$contexts.$properties['tutorialCount']\",\"value\":\"main.props['tutorialCount']\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+        },
+        {
+          "id": "text108",
+          "schemaId": "main",
+          "parentId": "card25",
+          "name": "text",
+          "type": "text",
+          "rank": "2",
+          "props": "{\"value\":\"\\\"Tutorials\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"14px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+        },
+        {
+          "id": "column22",
+          "schemaId": "main",
+          "parentId": "container16",
+          "name": "column",
+          "type": "column",
+          "rank": "2",
+          "props": "{}",
+          "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+        },
+        {
+          "id": "card26",
+          "schemaId": "main",
+          "parentId": "column22",
+          "name": "📖 Reference Card",
+          "type": "group",
+          "rank": "0",
+          "props": "{}",
+          "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"24px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+        },
+        {
+          "id": "text109",
+          "schemaId": "main",
+          "parentId": "card26",
+          "name": "text",
+          "type": "text",
+          "rank": "0",
+          "props": "{\"value\":\"\\\"📖\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"32px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+        },
+        {
+          "id": "text110",
+          "schemaId": "main",
+          "parentId": "card26",
+          "name": "text",
+          "type": "data",
+          "rank": "1",
+          "props": "{\"field\":\"$contexts.$properties['referenceCount']\",\"value\":\"main.props['referenceCount']\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+        },
+        {
+          "id": "text111",
+          "schemaId": "main",
+          "parentId": "card26",
+          "name": "text",
+          "type": "text",
+          "rank": "2",
+          "props": "{\"value\":\"\\\"Reference Docs\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"14px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+        },
+        {
+          "id": "column23",
+          "schemaId": "main",
+          "parentId": "container16",
+          "name": "column",
+          "type": "column",
+          "rank": "3",
+          "props": "{}",
+          "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+        },
+        {
+          "id": "card27",
+          "schemaId": "main",
+          "parentId": "column23",
+          "name": "🚀 Getting Started Card",
+          "type": "group",
+          "rank": "0",
+          "props": "{}",
+          "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"24px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+        },
+        {
+          "id": "text112",
+          "schemaId": "main",
+          "parentId": "card27",
+          "name": "text",
+          "type": "text",
+          "rank": "0",
+          "props": "{\"value\":\"\\\"🚀\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"32px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+        },
+        {
+          "id": "text113",
+          "schemaId": "main",
+          "parentId": "card27",
+          "name": "text",
+          "type": "data",
+          "rank": "1",
+          "props": "{\"field\":\"$contexts.$properties['gettingStartedCount']\",\"value\":\"main.props['gettingStartedCount']\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+        },
+        {
+          "id": "text114",
+          "schemaId": "main",
+          "parentId": "card27",
+          "name": "text",
+          "type": "text",
+          "rank": "2",
+          "props": "{\"value\":\"\\\"Getting Started\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"14px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+        },
+        {
+          "id": "column24",
+          "schemaId": "main",
+          "parentId": "container16",
+          "name": "column",
+          "type": "column",
+          "rank": "4",
+          "props": "{}",
+          "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+        },
+        {
+          "id": "card28",
+          "schemaId": "main",
+          "parentId": "column24",
+          "name": "✅ Completion Card",
+          "type": "group",
+          "rank": "0",
+          "props": "{}",
+          "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"24px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+        },
+        {
+          "id": "text115",
+          "schemaId": "main",
+          "parentId": "card28",
+          "name": "text",
+          "type": "text",
+          "rank": "0",
+          "props": "{\"value\":\"\\\"✅\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"32px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+        },
+        {
+          "id": "text116",
+          "schemaId": "main",
+          "parentId": "card28",
+          "name": "text",
+          "type": "data",
+          "rank": "1",
+          "props": "{\"field\":\"$contexts.$properties['completionRate']\",\"value\":\"main.props['completionRate']\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+        },
+        {
+          "id": "text117",
+          "schemaId": "main",
+          "parentId": "card28",
+          "name": "text",
+          "type": "text",
+          "rank": "2",
+          "props": "{\"value\":\"\\\"Completion\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"14px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+        },
+        {
+          "id": "container17",
+          "schemaId": "main",
+          "parentId": "main",
+          "name": "Navigation Links",
+          "type": "group",
+          "rank": "2",
+          "props": "{}",
+          "styles": "{\"layout\":\"\\\"row\\\"\",\"width\":\"\\\"100%\\\"\",\"gap\":\"24\",\"justifyContent\":\"\\\"center\\\"\",\"marginTop\":\"16\",\"marginBottom\":\"16\"}"
+        },
+        {
+          "id": "link1",
+          "schemaId": "main",
+          "parentId": "container17",
+          "name": "link",
+          "type": "flow",
+          "rank": "0",
+          "props": "{\"link\":\"\\\"\\\"\",\"label\":\"\\\"\\\"\",\"sticker\":\"\\\"\\\"\",\"value\":\"\\\"./Getting Started\\\"\"}",
+          "styles": "{\"sem\":\"\\\"a\\\"\",\"layout\":\"\\\"row\\\"\",\"--mk-link\":\"\\\"true\\\"\"}"
+        },
+        {
+          "id": "link2",
+          "schemaId": "main",
+          "parentId": "container17",
+          "name": "link",
+          "type": "flow",
+          "rank": "1",
+          "props": "{\"link\":\"\\\"\\\"\",\"label\":\"\\\"\\\"\",\"sticker\":\"\\\"\\\"\",\"value\":\"\\\"./Tutorials\\\"\"}",
+          "styles": "{\"sem\":\"\\\"a\\\"\",\"layout\":\"\\\"row\\\"\",\"--mk-link\":\"\\\"true\\\"\"}"
+        },
+        {
+          "id": "link3",
+          "schemaId": "main",
+          "parentId": "container17",
+          "name": "link",
+          "type": "flow",
+          "rank": "2",
+          "props": "{\"link\":\"\\\"\\\"\",\"label\":\"\\\"\\\"\",\"sticker\":\"\\\"\\\"\",\"value\":\"\\\"./Reference\\\"\"}",
+          "styles": "{\"sem\":\"\\\"a\\\"\",\"layout\":\"\\\"row\\\"\",\"--mk-link\":\"\\\"true\\\"\"}"
+        },
+        {
+          "id": "group2",
+          "schemaId": "main",
+          "parentId": "main",
+          "name": "Featured Content Section",
+          "type": "group",
+          "rank": "3",
+          "props": "{}",
+          "styles": "{\"layout\":\"\\\"column\\\"\",\"gap\":\"16\",\"width\":\"\\\"100%\\\"\"}"
+        },
+        {
+          "id": "text118",
+          "schemaId": "main",
+          "parentId": "group2",
+          "name": "text",
+          "type": "text",
+          "rank": "0",
+          "props": "{\"value\":\"\\\"📌 Featured Tutorials\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"sem\":\"\\\"h2\\\"\"}"
+        },
+        {
+          "id": "view1",
+          "schemaId": "main",
+          "parentId": "group2",
+          "name": "view",
+          "type": "flow",
+          "rank": "1",
+          "props": "{\"value\":\"\\\"./Tutorials/#*featured-tutorials\\\"\",\"context\":\"\\\"./Tutorials\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--mk-expanded\":\"\\\"true\\\"\",\"--mk-min-mode\":\"\\\"true\\\"\"}"
+        },
+        {
+          "id": "group3",
+          "schemaId": "main",
+          "parentId": "main",
+          "name": "Recent Content Section",
+          "type": "group",
+          "rank": "4",
+          "props": "{}",
+          "styles": "{\"layout\":\"\\\"column\\\"\",\"gap\":\"16\",\"marginTop\":\"16\",\"width\":\"\\\"100%\\\"\"}"
+        },
+        {
+          "id": "text119",
+          "schemaId": "main",
+          "parentId": "group3",
+          "name": "text",
+          "type": "text",
+          "rank": "0",
+          "props": "{\"value\":\"\\\"🕒 Recently Updated\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"sem\":\"\\\"h2\\\"\"}"
+        },
+        {
+          "id": "view2",
+          "schemaId": "main",
+          "parentId": "group3",
+          "name": "view",
+          "type": "flow",
+          "rank": "1",
+          "props": "{\"value\":\"\\\"./Reference/#*recent-updates\\\"\",\"context\":\"\\\"./Reference\\\"\"}",
+          "styles": "{\"width\":\"\\\"100%\\\"\",\"--mk-expanded\":\"\\\"true\\\"\",\"--mk-min-mode\":\"\\\"true\\\"\"}"
+        }
+      ]
+    }
+  },
+  "children": [
+    {
+      "meta": {
+        "version": "1.0.0",
+        "generated": "2025-10-30T15:11:33.867Z",
+        "generator": "space-gen"
+      },
+      "name": "Getting Started",
+      "path": "job_1761836438935_608d4a6b120a3ca8/Getting Started",
+      "definition": {
+        "defaultSticker": "emoji//1f680",
+        "fullWidth": true,
+        "defaultColor": "#4CAF50"
+      },
+      "properties": {
+        "cover": "https://images.unsplash.com/photo-1718220216044-006f43e3a9b1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxjbGVhbiUyMG1vZGVybiUyMHdvcmtzcGFjZSUyMHdpdGglMjBvcGVuJTIwZG9jdW1lbnRhdGlvbiUyMGJvb3xlbnwwfDB8fHwxNzYxODM3MDgxfDA&ixlib=rb-4.1.0&q=85&w=1920&q=80"
+      },
+      "context": {
+        "files": {
+          "schema": {
+            "id": "files",
+            "name": "Getting Started Articles",
+            "type": "db",
+            "def": "{\"icon\":\"ui//database\"}",
+            "predicate": "",
+            "primary": "true"
+          },
+          "cols": [
+            {
+              "name": "File",
+              "schemaId": "files",
+              "type": "file",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": "true"
+            },
+            {
+              "name": "description",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "order",
+              "schemaId": "files",
+              "type": "number",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "difficulty",
+              "schemaId": "files",
+              "type": "option",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "estimatedTime",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "icon",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "image",
+              "schemaId": "files",
+              "type": "image",
+              "value": "",
+              "hidden": "1",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "content",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "tags",
+              "schemaId": "files",
+              "type": "option-multi",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "lastUpdated",
+              "schemaId": "files",
+              "type": "date",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            }
+          ],
+          "rows": [
+            {
+              "File": "./Installing Make.md",
+              "description": "Learn how to install Make.md and set up your workspace for the first time",
+              "order": "1",
+              "difficulty": "Beginner",
+              "estimatedTime": "5 minutes",
+              "icon": "🚀",
+              "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+              "content": "# Installing Make.md\n\nWelcome to Make.md! This guide will walk you through the installation process...",
+              "tags": "[\"installation\",\"setup\",\"basics\"]",
+              "lastUpdated": "2025-10-15"
+            },
+            {
+              "File": "./Understanding Workspaces",
+              "description": "Explore how workspaces organize your content and projects in Make.md",
+              "order": "2",
+              "difficulty": "Beginner",
+              "estimatedTime": "7 minutes",
+              "icon": "🏢",
+              "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174",
+              "content": "# Understanding Workspaces\n\nWorkspaces are the foundation of Make.md organization...",
+              "tags": "[\"workspace\",\"basics\",\"concepts\"]",
+              "lastUpdated": "2025-10-14"
+            },
+            {
+              "File": "./Creating Your First Space",
+              "description": "Step-by-step tutorial for creating and configuring your first space",
+              "order": "3",
+              "difficulty": "Beginner",
+              "estimatedTime": "10 minutes",
+              "icon": "📦",
+              "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
+              "content": "# Creating Your First Space\n\nNow that you understand the basics, let's create your first space...",
+              "tags": "[\"first-space\",\"basics\",\"quickstart\"]",
+              "lastUpdated": "2025-10-13"
+            },
+            {
+              "File": "./Basic Navigation",
+              "description": "Master the essential navigation patterns and shortcuts in Make.md",
+              "order": "4",
+              "difficulty": "Beginner",
+              "estimatedTime": "6 minutes",
+              "icon": "🧭",
+              "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+              "content": "# Basic Navigation\n\nNavigating efficiently is key to productivity in Make.md...",
+              "tags": "[\"basics\",\"workspace\"]",
+              "lastUpdated": "2025-10-12"
+            },
+            {
+              "File": "./Understanding Frames",
+              "description": "Introduction to frames and how they structure your spaces",
+              "order": "5",
+              "difficulty": "Easy",
+              "estimatedTime": "8 minutes",
+              "icon": "🖼️",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+              "content": "# Understanding Frames\n\nFrames are the building blocks of your Make.md interface...",
+              "tags": "[\"concepts\",\"basics\"]",
+              "lastUpdated": "2025-10-11"
+            },
+            {
+              "File": "./Working with Contexts",
+              "description": "Learn how contexts manage and organize your data",
+              "order": "6",
+              "difficulty": "Easy",
+              "estimatedTime": "9 minutes",
+              "icon": "💾",
+              "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+              "content": "# Working with Contexts\n\nContexts are where your data lives in Make.md...",
+              "tags": "[\"concepts\",\"basics\"]",
+              "lastUpdated": "2025-10-10"
+            },
+            {
+              "File": "./Quick Start Guide",
+              "description": "Get up and running with Make.md in under 15 minutes",
+              "order": "7",
+              "difficulty": "Beginner",
+              "estimatedTime": "12 minutes",
+              "icon": "⚡",
+              "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984",
+              "content": "# Quick Start Guide\n\nThis comprehensive quick start will take you from zero to productive...",
+              "tags": "[\"quickstart\",\"setup\",\"basics\"]",
+              "lastUpdated": "2025-10-09"
+            },
+            {
+              "File": "./Essential Keyboard Shortcuts",
+              "description": "Master the most important keyboard shortcuts for faster workflows",
+              "order": "8",
+              "difficulty": "Easy",
+              "estimatedTime": "5 minutes",
+              "icon": "⌨️",
+              "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+              "content": "# Essential Keyboard Shortcuts\n\nSpeed up your workflow with these essential shortcuts...",
+              "tags": "[\"basics\",\"workspace\"]",
+              "lastUpdated": "2025-10-08"
+            }
+          ]
+        }
+      },
+      "frames": {
+        "main": {
+          "schema": {
+            "id": "main",
+            "name": "Getting Started",
+            "type": "frame",
+            "def": "{}",
+            "predicate": "",
+            "primary": ""
+          },
+          "cols": [
+            {
+              "name": "articleCount",
+              "schemaId": "main",
+              "type": "aggregate",
+              "value": "{\"alias\":\"Total Articles\",\"field\":\"File\",\"fn\":\"count\",\"schema\":\"files\"}",
+              "hidden": "",
+              "attrs": "{\"icon\":\"emoji//1f4da\"}",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "avgReadTime",
+              "schemaId": "main",
+              "type": "fileprop",
+              "value": "{\"alias\":\"️ Avg Read Time\",\"value\":\"7\"}",
+              "hidden": "",
+              "attrs": "{\"icon\":\"emoji//23f1\"}",
+              "unique": "",
+              "primary": ""
+            }
+          ],
+          "rows": [
+            {
+              "id": "main",
+              "schemaId": "main",
+              "parentId": "",
+              "name": "Getting Started",
+              "type": "group",
+              "rank": "0",
+              "props": "{\"articleCount\":\"0\",\"avgReadTime\":\"\\\"7 min\\\"\"}",
+              "styles": "{\"layout\":\"\\\"column\\\"\",\"gap\":\"24\"}"
+            },
+            {
+              "id": "container21",
+              "schemaId": "main",
+              "parentId": "main",
+              "name": "Header Section",
+              "type": "group",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"layout\":\"\\\"row\\\"\",\"width\":\"\\\"100%\\\"\",\"gap\":\"16\",\"marginBottom\":\"16\"}"
+            },
+            {
+              "id": "card37",
+              "schemaId": "main",
+              "parentId": "container21",
+              "name": "Total Articles Card",
+              "type": "group",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"padding\":\"\\\"20px\\\"\",\"flex\":\"\\\"1\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+            },
+            {
+              "id": "text144",
+              "schemaId": "main",
+              "parentId": "card37",
+              "name": "text",
+              "type": "text",
+              "rank": "0",
+              "props": "{\"value\":\"\\\"📚\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+            },
+            {
+              "id": "text145",
+              "schemaId": "main",
+              "parentId": "card37",
+              "name": "text",
+              "type": "data",
+              "rank": "1",
+              "props": "{\"field\":\"$contexts.$properties['articleCount']\",\"value\":\"main.props['articleCount']\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"24px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+            },
+            {
+              "id": "text146",
+              "schemaId": "main",
+              "parentId": "card37",
+              "name": "text",
+              "type": "text",
+              "rank": "2",
+              "props": "{\"value\":\"\\\"Total Articles\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"13px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+            },
+            {
+              "id": "card38",
+              "schemaId": "main",
+              "parentId": "container21",
+              "name": "Avg Read Time Card",
+              "type": "group",
+              "rank": "1",
+              "props": "{}",
+              "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"padding\":\"\\\"20px\\\"\",\"flex\":\"\\\"1\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+            },
+            {
+              "id": "text147",
+              "schemaId": "main",
+              "parentId": "card38",
+              "name": "text",
+              "type": "text",
+              "rank": "0",
+              "props": "{\"value\":\"\\\"⏱️\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+            },
+            {
+              "id": "text148",
+              "schemaId": "main",
+              "parentId": "card38",
+              "name": "text",
+              "type": "data",
+              "rank": "1",
+              "props": "{\"field\":\"$contexts.$properties['avgReadTime']\",\"value\":\"main.props['avgReadTime']\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"24px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+            },
+            {
+              "id": "text149",
+              "schemaId": "main",
+              "parentId": "card38",
+              "name": "text",
+              "type": "text",
+              "rank": "2",
+              "props": "{\"value\":\"\\\"Avg Read Time\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"13px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+            },
+            {
+              "id": "context10",
+              "schemaId": "main",
+              "parentId": "main",
+              "name": "context",
+              "type": "view",
+              "rank": "1",
+              "props": "{\"value\":\"\\\"all-articles\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--mk-min-mode\":\"\\\"true\\\"\",\"--mk-expanded\":\"\\\"true\\\"\"}"
+            }
+          ]
+        },
+        "all-articles": {
+          "schema": {
+            "id": "all-articles",
+            "name": "All Articles",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"showViews\":true}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"sort\":[{\"field\":\"order\",\"dir\":\"asc\"}],\"colsHidden\":[\"order\",\"icon\",\"content\",\"tags\",\"lastUpdated\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"}}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "table-view": {
+          "schema": {
+            "id": "table-view",
+            "name": "Table View",
+            "type": "view",
+            "def": "{\"icon\":\"ui//table\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"table\",\"listView\":\"spaces://$kit/#*tableView\",\"listGroup\":\"spaces://$kit/#*tableGroup\",\"listItem\":\"spaces://$kit/#*tableItem\",\"icon\":\"ui//table\",\"db\":\"files\",\"sort\":[{\"field\":\"order\",\"dir\":\"asc\"}],\"colsHidden\":[\"description\",\"order\",\"icon\",\"image\",\"content\"]}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "beginner-only": {
+          "schema": {
+            "id": "beginner-only",
+            "name": "Beginner",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"sort\":[{\"field\":\"order\",\"dir\":\"asc\"}],\"filters\":[{\"field\":\"difficulty\",\"fn\":\"equals\",\"value\":\"Beginner\"}],\"colsHidden\":[\"order\",\"difficulty\",\"icon\",\"content\",\"tags\",\"lastUpdated\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"}}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        }
+      },
+      "children": [
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.868Z",
+            "generator": "space-gen"
+          },
+          "name": "Basic Navigation",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Getting Started/Basic Navigation",
+          "definition": {
+            "defaultSticker": "🧭"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1617011205331-5f94af3055da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxiYXNpYyUyMG5hdmlnYXRpb258ZW58MHwwfHx8MTc2MTgzNzA3OXww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Basic Navigation",
+            "description": "Master the essential navigation patterns and shortcuts in Make.md",
+            "order": 4,
+            "difficulty": "Beginner",
+            "estimatedTime": "6 minutes",
+            "icon": "🧭",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+            "content": "# Basic Navigation\n\nNavigating efficiently is key to productivity in Make.md...",
+            "tags": [
+              "basics",
+              "workspace"
+            ],
+            "lastUpdated": "2025-10-12"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Basic Navigation.md",
+              "properties": {
+                "sticker": "\"\\U0001F9ED\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1617011205331-5f94af3055da?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxiYXNpYyUyMG5hdmlnYXRpb258ZW58MHwwfHx8MTc2MTgzNzA3OXww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Master the essential navigation patterns and shortcuts in Make.md",
+                "order": "4",
+                "difficulty": "Beginner",
+                "estimatedTime": "6 minutes",
+                "icon": "\"\\U0001F9ED\"",
+                "image": "'https://images.unsplash.com/photo-1460925895917-afdab827c52f'",
+                "content": "|-",
+                "tags": "",
+                "lastUpdated": "'2025-10-12'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.868Z",
+            "generator": "space-gen"
+          },
+          "name": "Creating Your First Space",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Getting Started/Creating Your First Space",
+          "definition": {
+            "defaultSticker": "📦"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1532254749169-ca0e30f76aa1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxjcmVhdGluZyUyMHlvdXIlMjBmaXJzdCUyMHNwYWNlfGVufDB8MHx8fDE3NjE4MzcwNzl8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Creating Your First Space",
+            "description": "Step-by-step tutorial for creating and configuring your first space",
+            "order": 3,
+            "difficulty": "Beginner",
+            "estimatedTime": "10 minutes",
+            "icon": "📦",
+            "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
+            "content": "# Creating Your First Space\n\nNow that you understand the basics, let's create your first space...",
+            "tags": [
+              "first-space",
+              "basics",
+              "quickstart"
+            ],
+            "lastUpdated": "2025-10-13"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Creating Your First Space.md",
+              "properties": {
+                "sticker": "\"\\U0001F4E6\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1532254749169-ca0e30f76aa1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxjcmVhdGluZyUyMHlvdXIlMjBmaXJzdCUyMHNwYWNlfGVufDB8MHx8fDE3NjE4MzcwNzl8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Step-by-step tutorial for creating and configuring your first space",
+                "order": "3",
+                "difficulty": "Beginner",
+                "estimatedTime": "10 minutes",
+                "icon": "\"\\U0001F4E6\"",
+                "image": "'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b'",
+                "content": "|-",
+                "tags": "",
+                "lastUpdated": "'2025-10-13'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.868Z",
+            "generator": "space-gen"
+          },
+          "name": "Essential Keyboard Shortcuts",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Getting Started/Essential Keyboard Shortcuts",
+          "definition": {
+            "defaultSticker": "⌨️"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1632125956091-abc742d2a497?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxlc3NlbnRpYWwlMjBrZXlib2FyZCUyMHNob3J0Y3V0c3xlbnwwfDB8fHwxNzYxODM3MDgxfDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Essential Keyboard Shortcuts",
+            "description": "Master the most important keyboard shortcuts for faster workflows",
+            "order": 8,
+            "difficulty": "Easy",
+            "estimatedTime": "5 minutes",
+            "icon": "⌨️",
+            "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3",
+            "content": "# Essential Keyboard Shortcuts\n\nSpeed up your workflow with these essential shortcuts...",
+            "tags": [
+              "basics",
+              "workspace"
+            ],
+            "lastUpdated": "2025-10-08"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Essential Keyboard Shortcuts.md",
+              "properties": {
+                "sticker": "⌨️",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1632125956091-abc742d2a497?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxlc3NlbnRpYWwlMjBrZXlib2FyZCUyMHNob3J0Y3V0c3xlbnwwfDB8fHwxNzYxODM3MDgxfDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Master the most important keyboard shortcuts for faster workflows",
+                "order": "8",
+                "difficulty": "Easy",
+                "estimatedTime": "5 minutes",
+                "icon": "⌨️",
+                "image": "'https://images.unsplash.com/photo-1587829741301-dc798b83add3'",
+                "content": "|-",
+                "tags": "",
+                "lastUpdated": "'2025-10-08'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.868Z",
+            "generator": "space-gen"
+          },
+          "name": "Installing Make.md",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Getting Started/Installing Make.md",
+          "definition": {
+            "defaultSticker": "🚀"
+          },
+          "properties": {
+            "alias": "Installing Make.md",
+            "description": "Learn how to install Make.md and set up your workspace for the first time",
+            "order": 1,
+            "difficulty": "Beginner",
+            "estimatedTime": "5 minutes",
+            "icon": "🚀",
+            "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+            "content": "# Installing Make.md\n\nWelcome to Make.md! This guide will walk you through the installation process...",
+            "tags": [
+              "installation",
+              "setup",
+              "basics"
+            ],
+            "lastUpdated": "2025-10-15"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Installing Make.md.md",
+              "properties": {
+                "sticker": "\"\\U0001F680\"",
+                "description": "Learn how to install Make.md and set up your workspace for the first time",
+                "order": "1",
+                "difficulty": "Beginner",
+                "estimatedTime": "5 minutes",
+                "icon": "\"\\U0001F680\"",
+                "image": "'https://images.unsplash.com/photo-1517694712202-14dd9538aa97'",
+                "content": ">-",
+                "tags": "",
+                "lastUpdated": "'2025-10-15'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.869Z",
+            "generator": "space-gen"
+          },
+          "name": "Quick Start Guide",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Getting Started/Quick Start Guide",
+          "definition": {
+            "defaultSticker": "⚡"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1713989901182-0bbd9a981cc0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxxdWljayUyMHN0YXJ0JTIwZ3VpZGV8ZW58MHwwfHx8MTc2MTgzNzA4MHww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Quick Start Guide",
+            "description": "Get up and running with Make.md in under 15 minutes",
+            "order": 7,
+            "difficulty": "Beginner",
+            "estimatedTime": "12 minutes",
+            "icon": "⚡",
+            "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984",
+            "content": "# Quick Start Guide\n\nThis comprehensive quick start will take you from zero to productive...",
+            "tags": [
+              "quickstart",
+              "setup",
+              "basics"
+            ],
+            "lastUpdated": "2025-10-09"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Quick Start Guide.md",
+              "properties": {
+                "sticker": "⚡",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1713989901182-0bbd9a981cc0?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxxdWljayUyMHN0YXJ0JTIwZ3VpZGV8ZW58MHwwfHx8MTc2MTgzNzA4MHww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Get up and running with Make.md in under 15 minutes",
+                "order": "7",
+                "difficulty": "Beginner",
+                "estimatedTime": "12 minutes",
+                "icon": "⚡",
+                "image": "'https://images.unsplash.com/photo-1553877522-43269d4ea984'",
+                "content": "|-",
+                "tags": "",
+                "lastUpdated": "'2025-10-09'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.869Z",
+            "generator": "space-gen"
+          },
+          "name": "Understanding Frames",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Getting Started/Understanding Frames",
+          "definition": {
+            "defaultSticker": "🖼️"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1599123711712-0909a878e5a8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHx1bmRlcnN0YW5kaW5nJTIwZnJhbWVzfGVufDB8MHx8fDE3NjE4MzcwODB8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Understanding Frames",
+            "description": "Introduction to frames and how they structure your spaces",
+            "order": 5,
+            "difficulty": "Easy",
+            "estimatedTime": "8 minutes",
+            "icon": "🖼️",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+            "content": "# Understanding Frames\n\nFrames are the building blocks of your Make.md interface...",
+            "tags": [
+              "concepts",
+              "basics"
+            ],
+            "lastUpdated": "2025-10-11"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Understanding Frames.md",
+              "properties": {
+                "sticker": "\"\\U0001F5BC️\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1599123711712-0909a878e5a8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHx1bmRlcnN0YW5kaW5nJTIwZnJhbWVzfGVufDB8MHx8fDE3NjE4MzcwODB8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Introduction to frames and how they structure your spaces",
+                "order": "5",
+                "difficulty": "Easy",
+                "estimatedTime": "8 minutes",
+                "icon": "\"\\U0001F5BC️\"",
+                "image": "'https://images.unsplash.com/photo-1551288049-bebda4e38f71'",
+                "content": "|-",
+                "tags": "",
+                "lastUpdated": "'2025-10-11'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.869Z",
+            "generator": "space-gen"
+          },
+          "name": "Understanding Workspaces",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Getting Started/Understanding Workspaces",
+          "definition": {
+            "defaultSticker": "🏢"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1603533867307-b354255e3c32?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHx1bmRlcnN0YW5kaW5nJTIwd29ya3NwYWNlc3xlbnwwfDB8fHwxNzYxODM3MDc5fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Understanding Workspaces",
+            "description": "Explore how workspaces organize your content and projects in Make.md",
+            "order": 2,
+            "difficulty": "Beginner",
+            "estimatedTime": "7 minutes",
+            "icon": "🏢",
+            "image": "https://images.unsplash.com/photo-1497215728101-856f4ea42174",
+            "content": "# Understanding Workspaces\n\nWorkspaces are the foundation of Make.md organization...",
+            "tags": [
+              "workspace",
+              "basics",
+              "concepts"
+            ],
+            "lastUpdated": "2025-10-14"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Understanding Workspaces.md",
+              "properties": {
+                "sticker": "\"\\U0001F3E2\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1603533867307-b354255e3c32?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHx1bmRlcnN0YW5kaW5nJTIwd29ya3NwYWNlc3xlbnwwfDB8fHwxNzYxODM3MDc5fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Explore how workspaces organize your content and projects in Make.md",
+                "order": "2",
+                "difficulty": "Beginner",
+                "estimatedTime": "7 minutes",
+                "icon": "\"\\U0001F3E2\"",
+                "image": "'https://images.unsplash.com/photo-1497215728101-856f4ea42174'",
+                "content": "|-",
+                "tags": "",
+                "lastUpdated": "'2025-10-14'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.870Z",
+            "generator": "space-gen"
+          },
+          "name": "Working with Contexts",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Getting Started/Working with Contexts",
+          "definition": {
+            "defaultSticker": "💾"
+          },
+          "properties": {
+            "alias": "Working with Contexts",
+            "description": "Learn how contexts manage and organize your data",
+            "order": 6,
+            "difficulty": "Easy",
+            "estimatedTime": "9 minutes",
+            "icon": "💾",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+            "content": "# Working with Contexts\n\nContexts are where your data lives in Make.md...",
+            "tags": [
+              "concepts",
+              "basics"
+            ],
+            "lastUpdated": "2025-10-10"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Working with Contexts.md",
+              "properties": {
+                "sticker": "\"\\U0001F4BE\"",
+                "description": "Learn how contexts manage and organize your data",
+                "order": "6",
+                "difficulty": "Easy",
+                "estimatedTime": "9 minutes",
+                "icon": "\"\\U0001F4BE\"",
+                "image": "'https://images.unsplash.com/photo-1558494949-ef010cbdcc31'",
+                "content": "|-",
+                "tags": "",
+                "lastUpdated": "'2025-10-10'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        }
+      ],
+      "notes": [],
+      "assets": [],
+      "templates": [],
+      "content": ""
+    },
+    {
+      "meta": {
+        "version": "1.0.0",
+        "generated": "2025-10-30T15:11:33.870Z",
+        "generator": "space-gen"
+      },
+      "name": "Reference",
+      "path": "job_1761836438935_608d4a6b120a3ca8/Reference",
+      "definition": {
+        "defaultSticker": "emoji//1f4d6",
+        "fullWidth": true,
+        "defaultColor": "#4CAF50"
+      },
+      "properties": {
+        "cover": "https://images.unsplash.com/photo-1741795746033-d50d48dc1da5?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxjb21wcmVoZW5zaXZlJTIwcmVmZXJlbmNlJTIwbGlicmFyeSUyMHdpdGglMjBvcmdhbml6ZWQlMjB0ZWN8ZW58MHwwfHx8MTc2MTgzNzA4OHww&ixlib=rb-4.1.0&q=85&w=1920&q=80"
+      },
+      "context": {
+        "files": {
+          "schema": {
+            "id": "files",
+            "name": "Reference Documents",
+            "type": "db",
+            "def": "{\"icon\":\"ui//database\"}",
+            "predicate": "",
+            "primary": "true"
+          },
+          "cols": [
+            {
+              "name": "File",
+              "schemaId": "files",
+              "type": "file",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": "true"
+            },
+            {
+              "name": "description",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "category",
+              "schemaId": "files",
+              "type": "option",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "subcategory",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "icon",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "image",
+              "schemaId": "files",
+              "type": "image",
+              "value": "",
+              "hidden": "1",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "content",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "syntax",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "parameters",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "examples",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "relatedTopics",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "tags",
+              "schemaId": "files",
+              "type": "option-multi",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "lastUpdated",
+              "schemaId": "files",
+              "type": "date",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "apiVersion",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            }
+          ],
+          "rows": [
+            {
+              "File": "./SimpleFrame Interface",
+              "description": "Complete reference for the SimpleFrame interface and all frame types",
+              "category": "Components",
+              "subcategory": "Frame Types",
+              "icon": "🖼️",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+              "content": "# SimpleFrame Interface\n\nThe SimpleFrame interface defines the structure of UI components...",
+              "syntax": "{ type: SimpleFrameType, props?: any, styles?: any, children?: SimpleFrame[] }",
+              "parameters": "type (required), props (optional), styles (optional), children (optional), name (optional)",
+              "examples": "{ \"type\": \"group\", \"children\": [...] }",
+              "relatedTopics": "SimpleFrameType, Frame Properties, Styling",
+              "tags": "[\"component\",\"frame\"]",
+              "lastUpdated": "2025-10-15",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./SimpleContext Interface",
+              "description": "Reference for context structure, columns, rows, and views",
+              "category": "Data Types",
+              "subcategory": "Context Structure",
+              "icon": "💾",
+              "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+              "content": "# SimpleContext Interface\n\nContexts manage data storage and retrieval...",
+              "syntax": "{ id: string, name: string, primary: boolean, columns: SimpleColumn[], rows: any[], views?: SimpleView[] }",
+              "parameters": "id (required), name (required), primary (required), columns (required), rows (required), views (optional)",
+              "examples": "[{ \"id\": \"tasks\", \"name\": \"Tasks\", \"primary\": true, \"columns\": [...] }]",
+              "relatedTopics": "SimpleColumn, SimpleView, Context Properties",
+              "tags": "[\"type\",\"context\"]",
+              "lastUpdated": "2025-10-14",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./Aggregate Properties",
+              "description": "Using aggregate functions to calculate values from context data",
+              "category": "Properties",
+              "subcategory": "Frame Properties",
+              "icon": "🔢",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+              "content": "# Aggregate Properties\n\nAggregates calculate values from context data...",
+              "syntax": "{ type: 'aggregate', config: { aggregate: { schema: string, fn: string, field?: string } } }",
+              "parameters": "schema (required), fn (required: count|sum|avg|min|max), field (optional), filters (optional)",
+              "examples": "{ \"aggregate\": { \"schema\": \"tasks\", \"fn\": \"count\" } }",
+              "relatedTopics": "Frame Properties, Formula Properties, Context References",
+              "tags": "[\"property\",\"frame\"]",
+              "lastUpdated": "2025-10-13",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./View Types Reference",
+              "description": "Complete list of available view types and their configurations",
+              "category": "Views",
+              "subcategory": "View Configuration",
+              "icon": "👁️",
+              "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+              "content": "# View Types Reference\n\nMake.md supports multiple view types for displaying data...",
+              "syntax": "{ id: string, type: ViewType, name: string, showFields: string[], filters?: Filter[] }",
+              "parameters": "id, type (list|table|cards|gallery|board|calendar|flow|catalog|details|tasks|folder), name, showFields",
+              "examples": "{ \"id\": \"tasks-view\", \"type\": \"table\", \"showFields\": [\"title\", \"status\"] }",
+              "relatedTopics": "Context Views, Filter Configuration, Sorting",
+              "tags": "[\"view\",\"context\"]",
+              "lastUpdated": "2025-10-12",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./Theme Tokens",
+              "description": "CSS variables and theme tokens for consistent styling",
+              "category": "Configuration",
+              "subcategory": "Theming",
+              "icon": "🎨",
+              "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+              "content": "# Theme Tokens\n\nUse CSS variables for consistent, theme-aware styling...",
+              "syntax": "var(--mk-ui-text-primary)",
+              "parameters": "Color tokens, spacing tokens, semantic tokens",
+              "examples": "{ \"color\": \"var(--mk-ui-text-primary)\" }",
+              "relatedTopics": "Styling, Semantic Styles, Responsive Design",
+              "tags": "[\"config\",\"component\"]",
+              "lastUpdated": "2025-10-11",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./Action API",
+              "description": "Reference for onClick actions and interactive handlers",
+              "category": "APIs",
+              "subcategory": "Action Handlers",
+              "icon": "⚡",
+              "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+              "content": "# Action API\n\nActions enable interactivity in your Make.md spaces...",
+              "syntax": "{ namespace: string, method: string, params: any }",
+              "parameters": "namespace (path|table|context), method (open|insert|update|delete|editModal), params (object)",
+              "examples": "{ \"namespace\": \"path\", \"method\": \"open\", \"params\": { \"path\": \"./Page\" } }",
+              "relatedTopics": "Button Components, Click Handlers, Navigation",
+              "tags": "[\"api\",\"action\"]",
+              "lastUpdated": "2025-10-10",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./Column Types",
+              "description": "All available column types for context data",
+              "category": "Data Types",
+              "subcategory": "Column Configuration",
+              "icon": "📊",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+              "content": "# Column Types\n\nColumns define the structure of your context data...",
+              "syntax": "{ name: string, type: ColumnType, primary?: boolean, config?: any }",
+              "parameters": "name, type (text|number|date|option|option-multi|image|context|context-multi), primary, config",
+              "examples": "{ \"name\": \"status\", \"type\": \"option\", \"config\": { \"options\": [\"Todo\", \"Done\"] } }",
+              "relatedTopics": "SimpleContext, Data Management, Column Configuration",
+              "tags": "[\"type\",\"context\"]",
+              "lastUpdated": "2025-10-09",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./Semantic Styles",
+              "description": "Using semantic style tokens for consistent component styling",
+              "category": "Configuration",
+              "subcategory": "Styling",
+              "icon": "✨",
+              "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+              "content": "# Semantic Styles\n\nSemantic styles provide consistent, predefined styling...",
+              "syntax": "{ sem: 'h1' | 'h2' | 'h3' | 'button' | 'button-primary' | 'card' }",
+              "parameters": "sem (semantic style token)",
+              "examples": "{ \"sem\": \"h2\" }",
+              "relatedTopics": "Theme Tokens, Typography, Component Styling",
+              "tags": "[\"config\",\"component\"]",
+              "lastUpdated": "2025-10-08",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./Filter Configuration",
+              "description": "How to configure filters for views and aggregates",
+              "category": "Views",
+              "subcategory": "Filtering",
+              "icon": "🔍",
+              "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+              "content": "# Filter Configuration\n\nFilters refine data displayed in views and aggregates...",
+              "syntax": "{ field: string, fn: FilterFunction, value: any }",
+              "parameters": "field, fn (equals|notEquals|contains|isEmpty|gt|lt|gte|lte|before|after), value",
+              "examples": "{ \"field\": \"status\", \"fn\": \"equals\", \"value\": \"active\" }",
+              "relatedTopics": "View Configuration, Aggregate Properties, Data Queries",
+              "tags": "[\"view\",\"context\"]",
+              "lastUpdated": "2025-10-07",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./Link Component",
+              "description": "Navigation link component for inter-page navigation",
+              "category": "Components",
+              "subcategory": "Navigation",
+              "icon": "🔗",
+              "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+              "content": "# Link Component\n\nLinks enable navigation between pages and sections...",
+              "syntax": "{ type: 'link', props: { value: string, label?: string } }",
+              "parameters": "value (required: path), label (optional: display text)",
+              "examples": "{ \"type\": \"link\", \"props\": { \"value\": \"./Page\" } }",
+              "relatedTopics": "Navigation, Action API, Button Component",
+              "tags": "[\"component\",\"action\"]",
+              "lastUpdated": "2025-10-06",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./Space Configuration",
+              "description": "SimpleSpace interface for configuring space metadata",
+              "category": "Configuration",
+              "subcategory": "Space Setup",
+              "icon": "🏠",
+              "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
+              "content": "# Space Configuration\n\nThe SimpleSpace interface defines space metadata...",
+              "syntax": "{ name: string, sticker: string, cover: string, description: string }",
+              "parameters": "name (required), sticker (emoji icon), cover (Unsplash description), description (text)",
+              "examples": "{ \"name\": \"My Space\", \"sticker\": \"📦\", \"description\": \"A space for...\" }",
+              "relatedTopics": "Space Structure, Metadata, Cover Images",
+              "tags": "[\"config\",\"space\"]",
+              "lastUpdated": "2025-10-05",
+              "apiVersion": "1.0"
+            },
+            {
+              "File": "./Formula Properties",
+              "description": "Creating calculated values with formula properties",
+              "category": "Properties",
+              "subcategory": "Frame Properties",
+              "icon": "📐",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+              "content": "# Formula Properties\n\nFormulas enable calculated values in frames...",
+              "syntax": "{ type: 'formula', config: { formula: string | number } }",
+              "parameters": "formula (expression or static value)",
+              "examples": "{ \"formula\": \"85\" }",
+              "relatedTopics": "Frame Properties, Aggregate Properties, Calculations",
+              "tags": "[\"property\",\"frame\"]",
+              "lastUpdated": "2025-10-04",
+              "apiVersion": "1.0"
+            }
+          ]
+        }
+      },
+      "frames": {
+        "main": {
+          "schema": {
+            "id": "main",
+            "name": "Reference",
+            "type": "frame",
+            "def": "{}",
+            "predicate": "",
+            "primary": ""
+          },
+          "cols": [
+            {
+              "name": "referenceCount",
+              "schemaId": "main",
+              "type": "aggregate",
+              "value": "{\"alias\":\"Total Documents\",\"field\":\"File\",\"fn\":\"count\",\"schema\":\"files\"}",
+              "hidden": "",
+              "attrs": "{\"icon\":\"emoji//1f4d6\"}",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "categoryCount",
+              "schemaId": "main",
+              "type": "fileprop",
+              "value": "{\"alias\":\"Categories\",\"value\":\"7\"}",
+              "hidden": "",
+              "attrs": "{\"icon\":\"emoji//1f4c2\"}",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "recentUpdateCount",
+              "schemaId": "main",
+              "type": "aggregate",
+              "value": "{\"alias\":\"Recent Updates\",\"field\":\"File\",\"fn\":\"count\",\"filters\":[{\"type\":\"any\",\"trueFalse\":true,\"filters\":[{\"field\":\"lastUpdated\",\"value\":\"2025-10-10\",\"fn\":\"isGreatThanOrEqual\"}]}],\"schema\":\"files\"}",
+              "hidden": "",
+              "attrs": "{\"icon\":\"emoji//1f504\"}",
+              "unique": "",
+              "primary": ""
+            }
+          ],
+          "rows": [
+            {
+              "id": "main",
+              "schemaId": "main",
+              "parentId": "",
+              "name": "Reference",
+              "type": "group",
+              "rank": "0",
+              "props": "{\"referenceCount\":\"0\",\"categoryCount\":\"\\\"7\\\"\",\"recentUpdateCount\":\"0\"}",
+              "styles": "{\"layout\":\"\\\"column\\\"\",\"gap\":\"24\"}"
+            },
+            {
+              "id": "container22",
+              "schemaId": "main",
+              "parentId": "main",
+              "name": "Metrics Section",
+              "type": "group",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"layout\":\"\\\"row\\\"\",\"width\":\"\\\"100%\\\"\",\"gap\":\"16\",\"marginBottom\":\"16\"}"
+            },
+            {
+              "id": "column31",
+              "schemaId": "main",
+              "parentId": "container22",
+              "name": "column",
+              "type": "column",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+            },
+            {
+              "id": "card39",
+              "schemaId": "main",
+              "parentId": "column31",
+              "name": "Total Documents Card",
+              "type": "group",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"20px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+            },
+            {
+              "id": "text150",
+              "schemaId": "main",
+              "parentId": "card39",
+              "name": "text",
+              "type": "text",
+              "rank": "0",
+              "props": "{\"value\":\"\\\"📖\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+            },
+            {
+              "id": "text151",
+              "schemaId": "main",
+              "parentId": "card39",
+              "name": "text",
+              "type": "data",
+              "rank": "1",
+              "props": "{\"field\":\"$contexts.$properties['referenceCount']\",\"value\":\"main.props['referenceCount']\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"24px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+            },
+            {
+              "id": "text152",
+              "schemaId": "main",
+              "parentId": "card39",
+              "name": "text",
+              "type": "text",
+              "rank": "2",
+              "props": "{\"value\":\"\\\"Total Documents\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"13px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+            },
+            {
+              "id": "column32",
+              "schemaId": "main",
+              "parentId": "container22",
+              "name": "column",
+              "type": "column",
+              "rank": "1",
+              "props": "{}",
+              "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+            },
+            {
+              "id": "card40",
+              "schemaId": "main",
+              "parentId": "column32",
+              "name": "Categories Card",
+              "type": "group",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"20px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+            },
+            {
+              "id": "text153",
+              "schemaId": "main",
+              "parentId": "card40",
+              "name": "text",
+              "type": "text",
+              "rank": "0",
+              "props": "{\"value\":\"\\\"📂\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+            },
+            {
+              "id": "text154",
+              "schemaId": "main",
+              "parentId": "card40",
+              "name": "text",
+              "type": "data",
+              "rank": "1",
+              "props": "{\"field\":\"$contexts.$properties['categoryCount']\",\"value\":\"main.props['categoryCount']\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"24px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+            },
+            {
+              "id": "text155",
+              "schemaId": "main",
+              "parentId": "card40",
+              "name": "text",
+              "type": "text",
+              "rank": "2",
+              "props": "{\"value\":\"\\\"Categories\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"13px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+            },
+            {
+              "id": "column33",
+              "schemaId": "main",
+              "parentId": "container22",
+              "name": "column",
+              "type": "column",
+              "rank": "2",
+              "props": "{}",
+              "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+            },
+            {
+              "id": "card41",
+              "schemaId": "main",
+              "parentId": "column33",
+              "name": "Recent Updates Card",
+              "type": "group",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"20px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+            },
+            {
+              "id": "text156",
+              "schemaId": "main",
+              "parentId": "card41",
+              "name": "text",
+              "type": "text",
+              "rank": "0",
+              "props": "{\"value\":\"\\\"🔄\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+            },
+            {
+              "id": "text157",
+              "schemaId": "main",
+              "parentId": "card41",
+              "name": "text",
+              "type": "data",
+              "rank": "1",
+              "props": "{\"field\":\"$contexts.$properties['recentUpdateCount']\",\"value\":\"main.props['recentUpdateCount']\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"24px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+            },
+            {
+              "id": "text158",
+              "schemaId": "main",
+              "parentId": "card41",
+              "name": "text",
+              "type": "text",
+              "rank": "2",
+              "props": "{\"value\":\"\\\"Recent Updates\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"13px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+            },
+            {
+              "id": "context11",
+              "schemaId": "main",
+              "parentId": "main",
+              "name": "context",
+              "type": "view",
+              "rank": "1",
+              "props": "{\"value\":\"\\\"all-reference\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--mk-min-mode\":\"\\\"true\\\"\",\"--mk-expanded\":\"\\\"true\\\"\"}"
+            }
+          ]
+        },
+        "all-reference": {
+          "schema": {
+            "id": "all-reference",
+            "name": "All Documentation",
+            "type": "view",
+            "def": "{\"icon\":\"ui//table\",\"db\":\"files\",\"showViews\":true}",
+            "predicate": "{\"view\":\"table\",\"listView\":\"spaces://$kit/#*tableView\",\"listGroup\":\"spaces://$kit/#*tableGroup\",\"listItem\":\"spaces://$kit/#*tableItem\",\"icon\":\"ui//table\",\"db\":\"files\",\"sort\":[{\"field\":\"lastUpdated\",\"dir\":\"desc\"}],\"colsHidden\":[\"description\",\"icon\",\"image\",\"content\",\"syntax\",\"parameters\",\"examples\",\"relatedTopics\",\"tags\"]}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "recent-updates": {
+          "schema": {
+            "id": "recent-updates",
+            "name": "Recent Updates",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"sort\":[{\"field\":\"lastUpdated\",\"dir\":\"desc\"}],\"colsHidden\":[\"subcategory\",\"icon\",\"content\",\"syntax\",\"parameters\",\"examples\",\"relatedTopics\",\"tags\",\"apiVersion\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"},\"limit\":4}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "components-category": {
+          "schema": {
+            "id": "components-category",
+            "name": "Components",
+            "type": "view",
+            "def": "{\"icon\":\"ui//table\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"table\",\"listView\":\"spaces://$kit/#*tableView\",\"listGroup\":\"spaces://$kit/#*tableGroup\",\"listItem\":\"spaces://$kit/#*tableItem\",\"icon\":\"ui//table\",\"db\":\"files\",\"filters\":[{\"field\":\"category\",\"fn\":\"equals\",\"value\":\"Components\"}],\"colsHidden\":[\"category\",\"icon\",\"image\",\"content\",\"syntax\",\"parameters\",\"examples\",\"relatedTopics\",\"tags\",\"apiVersion\"]}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "properties-category": {
+          "schema": {
+            "id": "properties-category",
+            "name": "Properties",
+            "type": "view",
+            "def": "{\"icon\":\"ui//table\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"table\",\"listView\":\"spaces://$kit/#*tableView\",\"listGroup\":\"spaces://$kit/#*tableGroup\",\"listItem\":\"spaces://$kit/#*tableItem\",\"icon\":\"ui//table\",\"db\":\"files\",\"filters\":[{\"field\":\"category\",\"fn\":\"equals\",\"value\":\"Properties\"}],\"colsHidden\":[\"category\",\"icon\",\"image\",\"content\",\"syntax\",\"parameters\",\"examples\",\"relatedTopics\",\"tags\",\"apiVersion\"]}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "apis-category": {
+          "schema": {
+            "id": "apis-category",
+            "name": "APIs",
+            "type": "view",
+            "def": "{\"icon\":\"ui//table\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"table\",\"listView\":\"spaces://$kit/#*tableView\",\"listGroup\":\"spaces://$kit/#*tableGroup\",\"listItem\":\"spaces://$kit/#*tableItem\",\"icon\":\"ui//table\",\"db\":\"files\",\"filters\":[{\"field\":\"category\",\"fn\":\"equals\",\"value\":\"APIs\"}],\"colsHidden\":[\"category\",\"icon\",\"image\",\"content\",\"syntax\",\"parameters\",\"examples\",\"relatedTopics\",\"tags\",\"apiVersion\"]}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "views-category": {
+          "schema": {
+            "id": "views-category",
+            "name": "Views",
+            "type": "view",
+            "def": "{\"icon\":\"ui//table\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"table\",\"listView\":\"spaces://$kit/#*tableView\",\"listGroup\":\"spaces://$kit/#*tableGroup\",\"listItem\":\"spaces://$kit/#*tableItem\",\"icon\":\"ui//table\",\"db\":\"files\",\"filters\":[{\"field\":\"category\",\"fn\":\"equals\",\"value\":\"Views\"}],\"colsHidden\":[\"category\",\"icon\",\"image\",\"content\",\"syntax\",\"parameters\",\"examples\",\"relatedTopics\",\"tags\",\"apiVersion\"]}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        }
+      },
+      "children": [
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.871Z",
+            "generator": "space-gen"
+          },
+          "name": "Action API",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/Action API",
+          "definition": {
+            "defaultSticker": "⚡"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1660262848906-319f55766d2b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxhY3Rpb24lMjBhcGl8ZW58MHwwfHx8MTc2MTgzNzA4NXww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Action API",
+            "description": "Reference for onClick actions and interactive handlers",
+            "category": "APIs",
+            "subcategory": "Action Handlers",
+            "icon": "⚡",
+            "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+            "content": "# Action API\n\nActions enable interactivity in your Make.md spaces...",
+            "syntax": "{ namespace: string, method: string, params: any }",
+            "parameters": "namespace (path|table|context), method (open|insert|update|delete|editModal), params (object)",
+            "examples": "{ \"namespace\": \"path\", \"method\": \"open\", \"params\": { \"path\": \"./Page\" } }",
+            "relatedTopics": "Button Components, Click Handlers, Navigation",
+            "tags": [
+              "api",
+              "action"
+            ],
+            "lastUpdated": "2025-10-10",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Action API.md",
+              "properties": {
+                "sticker": "⚡",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1660262848906-319f55766d2b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxhY3Rpb24lMjBhcGl8ZW58MHwwfHx8MTc2MTgzNzA4NXww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Reference for onClick actions and interactive handlers",
+                "category": "APIs",
+                "subcategory": "Action Handlers",
+                "icon": "⚡",
+                "image": "'https://images.unsplash.com/photo-1517694712202-14dd9538aa97'",
+                "content": "|-",
+                "syntax": "'{ namespace: string, method: string, params: any }'",
+                "parameters": ">-",
+                "examples": "'{ \"namespace\": \"path\", \"method\": \"open\", \"params\": { \"path\": \"./Page\" } }'",
+                "relatedTopics": "'Button Components, Click Handlers, Navigation'",
+                "tags": "",
+                "lastUpdated": "'2025-10-10'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.871Z",
+            "generator": "space-gen"
+          },
+          "name": "Aggregate Properties",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/Aggregate Properties",
+          "definition": {
+            "defaultSticker": "🔢"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1649796877686-847d6bdeea6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxhZ2dyZWdhdGUlMjBwcm9wZXJ0aWVzfGVufDB8MHx8fDE3NjE4MzcwODN8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Aggregate Properties",
+            "description": "Using aggregate functions to calculate values from context data",
+            "category": "Properties",
+            "subcategory": "Frame Properties",
+            "icon": "🔢",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+            "content": "# Aggregate Properties\n\nAggregates calculate values from context data...",
+            "syntax": "{ type: 'aggregate', config: { aggregate: { schema: string, fn: string, field?: string } } }",
+            "parameters": "schema (required), fn (required: count|sum|avg|min|max), field (optional), filters (optional)",
+            "examples": "{ \"aggregate\": { \"schema\": \"tasks\", \"fn\": \"count\" } }",
+            "relatedTopics": "Frame Properties, Formula Properties, Context References",
+            "tags": [
+              "property",
+              "frame"
+            ],
+            "lastUpdated": "2025-10-13",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Aggregate Properties.md",
+              "properties": {
+                "sticker": "\"\\U0001F522\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1649796877686-847d6bdeea6b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxhZ2dyZWdhdGUlMjBwcm9wZXJ0aWVzfGVufDB8MHx8fDE3NjE4MzcwODN8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Using aggregate functions to calculate values from context data",
+                "category": "Properties",
+                "subcategory": "Frame Properties",
+                "icon": "\"\\U0001F522\"",
+                "image": "'https://images.unsplash.com/photo-1551288049-bebda4e38f71'",
+                "content": "|-",
+                "syntax": ">-",
+                "{ type": "'aggregate', config: { aggregate: { schema: string, fn: string,",
+                "field?": "string } } }",
+                "parameters": ">-",
+                "schema (required), fn (required": "count|sum|avg|min|max), field (optional),",
+                "examples": "'{ \"aggregate\": { \"schema\": \"tasks\", \"fn\": \"count\" } }'",
+                "relatedTopics": "'Frame Properties, Formula Properties, Context References'",
+                "tags": "",
+                "lastUpdated": "'2025-10-13'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.872Z",
+            "generator": "space-gen"
+          },
+          "name": "Column Types",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/Column Types",
+          "definition": {
+            "defaultSticker": "📊"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1723166825865-993b9db9626f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxjb2x1bW4lMjB0eXBlc3xlbnwwfDB8fHwxNzYxODM3MDg1fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Column Types",
+            "description": "All available column types for context data",
+            "category": "Data Types",
+            "subcategory": "Column Configuration",
+            "icon": "📊",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+            "content": "# Column Types\n\nColumns define the structure of your context data...",
+            "syntax": "{ name: string, type: ColumnType, primary?: boolean, config?: any }",
+            "parameters": "name, type (text|number|date|option|option-multi|image|context|context-multi), primary, config",
+            "examples": "{ \"name\": \"status\", \"type\": \"option\", \"config\": { \"options\": [\"Todo\", \"Done\"] } }",
+            "relatedTopics": "SimpleContext, Data Management, Column Configuration",
+            "tags": [
+              "type",
+              "context"
+            ],
+            "lastUpdated": "2025-10-09",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Column Types.md",
+              "properties": {
+                "sticker": "\"\\U0001F4CA\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1723166825865-993b9db9626f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxjb2x1bW4lMjB0eXBlc3xlbnwwfDB8fHwxNzYxODM3MDg1fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "All available column types for context data",
+                "category": "Data Types",
+                "subcategory": "Column Configuration",
+                "icon": "\"\\U0001F4CA\"",
+                "image": "'https://images.unsplash.com/photo-1551288049-bebda4e38f71'",
+                "content": "|-",
+                "syntax": "'{ name: string, type: ColumnType, primary?: boolean, config?: any }'",
+                "parameters": ">-",
+                "examples": ">-",
+                "{ \"name\"": "\"status\", \"type\": \"option\", \"config\": { \"options\": [\"Todo\", \"Done\"]",
+                "relatedTopics": "'SimpleContext, Data Management, Column Configuration'",
+                "tags": "",
+                "lastUpdated": "'2025-10-09'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.872Z",
+            "generator": "space-gen"
+          },
+          "name": "Filter Configuration",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/Filter Configuration",
+          "definition": {
+            "defaultSticker": "🔍"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1702534554606-9567319a22a9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxmaWx0ZXIlMjBjb25maWd1cmF0aW9ufGVufDB8MHx8fDE3NjE4MzcwODZ8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Filter Configuration",
+            "description": "How to configure filters for views and aggregates",
+            "category": "Views",
+            "subcategory": "Filtering",
+            "icon": "🔍",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+            "content": "# Filter Configuration\n\nFilters refine data displayed in views and aggregates...",
+            "syntax": "{ field: string, fn: FilterFunction, value: any }",
+            "parameters": "field, fn (equals|notEquals|contains|isEmpty|gt|lt|gte|lte|before|after), value",
+            "examples": "{ \"field\": \"status\", \"fn\": \"equals\", \"value\": \"active\" }",
+            "relatedTopics": "View Configuration, Aggregate Properties, Data Queries",
+            "tags": [
+              "view",
+              "context"
+            ],
+            "lastUpdated": "2025-10-07",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Filter Configuration.md",
+              "properties": {
+                "sticker": "\"\\U0001F50D\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1702534554606-9567319a22a9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxmaWx0ZXIlMjBjb25maWd1cmF0aW9ufGVufDB8MHx8fDE3NjE4MzcwODZ8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "How to configure filters for views and aggregates",
+                "category": "Views",
+                "subcategory": "Filtering",
+                "icon": "\"\\U0001F50D\"",
+                "image": "'https://images.unsplash.com/photo-1460925895917-afdab827c52f'",
+                "content": "|-",
+                "syntax": "'{ field: string, fn: FilterFunction, value: any }'",
+                "parameters": ">-",
+                "examples": "'{ \"field\": \"status\", \"fn\": \"equals\", \"value\": \"active\" }'",
+                "relatedTopics": "'View Configuration, Aggregate Properties, Data Queries'",
+                "tags": "",
+                "lastUpdated": "'2025-10-07'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.873Z",
+            "generator": "space-gen"
+          },
+          "name": "Formula Properties",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/Formula Properties",
+          "definition": {
+            "defaultSticker": "📐"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1740818576277-3921a6f5334e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxmb3JtdWxhJTIwcHJvcGVydGllc3xlbnwwfDB8fHwxNzYxODM3MDg3fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Formula Properties",
+            "description": "Creating calculated values with formula properties",
+            "category": "Properties",
+            "subcategory": "Frame Properties",
+            "icon": "📐",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+            "content": "# Formula Properties\n\nFormulas enable calculated values in frames...",
+            "syntax": "{ type: 'formula', config: { formula: string | number } }",
+            "parameters": "formula (expression or static value)",
+            "examples": "{ \"formula\": \"85\" }",
+            "relatedTopics": "Frame Properties, Aggregate Properties, Calculations",
+            "tags": [
+              "property",
+              "frame"
+            ],
+            "lastUpdated": "2025-10-04",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Formula Properties.md",
+              "properties": {
+                "sticker": "\"\\U0001F4D0\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1740818576277-3921a6f5334e?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxmb3JtdWxhJTIwcHJvcGVydGllc3xlbnwwfDB8fHwxNzYxODM3MDg3fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Creating calculated values with formula properties",
+                "category": "Properties",
+                "subcategory": "Frame Properties",
+                "icon": "\"\\U0001F4D0\"",
+                "image": "'https://images.unsplash.com/photo-1551288049-bebda4e38f71'",
+                "content": "|-",
+                "syntax": "'{ type: ''formula'', config: { formula: string | number } }'",
+                "parameters": "formula (expression or static value)",
+                "examples": "'{ \"formula\": \"85\" }'",
+                "relatedTopics": "'Frame Properties, Aggregate Properties, Calculations'",
+                "tags": "",
+                "lastUpdated": "'2025-10-04'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.873Z",
+            "generator": "space-gen"
+          },
+          "name": "Link Component",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/Link Component",
+          "definition": {
+            "defaultSticker": "🔗"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1746207548939-c88f406bd432?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxsaW5rJTIwY29tcG9uZW50fGVufDB8MHx8fDE3NjE4MzcwODZ8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Link Component",
+            "description": "Navigation link component for inter-page navigation",
+            "category": "Components",
+            "subcategory": "Navigation",
+            "icon": "🔗",
+            "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+            "content": "# Link Component\n\nLinks enable navigation between pages and sections...",
+            "syntax": "{ type: 'link', props: { value: string, label?: string } }",
+            "parameters": "value (required: path), label (optional: display text)",
+            "examples": "{ \"type\": \"link\", \"props\": { \"value\": \"./Page\" } }",
+            "relatedTopics": "Navigation, Action API, Button Component",
+            "tags": [
+              "component",
+              "action"
+            ],
+            "lastUpdated": "2025-10-06",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Link Component.md",
+              "properties": {
+                "sticker": "\"\\U0001F517\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1746207548939-c88f406bd432?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxsaW5rJTIwY29tcG9uZW50fGVufDB8MHx8fDE3NjE4MzcwODZ8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Navigation link component for inter-page navigation",
+                "category": "Components",
+                "subcategory": "Navigation",
+                "icon": "\"\\U0001F517\"",
+                "image": "'https://images.unsplash.com/photo-1517694712202-14dd9538aa97'",
+                "content": "|-",
+                "syntax": "'{ type: ''link'', props: { value: string, label?: string } }'",
+                "parameters": "'value (required: path), label (optional: display text)'",
+                "examples": "'{ \"type\": \"link\", \"props\": { \"value\": \"./Page\" } }'",
+                "relatedTopics": "'Navigation, Action API, Button Component'",
+                "tags": "",
+                "lastUpdated": "'2025-10-06'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.874Z",
+            "generator": "space-gen"
+          },
+          "name": "Semantic Styles",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/Semantic Styles",
+          "definition": {
+            "defaultSticker": "✨"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1740214610875-81a39ed81f08?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxzZW1hbnRpYyUyMHN0eWxlc3xlbnwwfDB8fHwxNzYxODM3MDg2fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Semantic Styles",
+            "description": "Using semantic style tokens for consistent component styling",
+            "category": "Configuration",
+            "subcategory": "Styling",
+            "icon": "✨",
+            "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+            "content": "# Semantic Styles\n\nSemantic styles provide consistent, predefined styling...",
+            "syntax": "{ sem: 'h1' | 'h2' | 'h3' | 'button' | 'button-primary' | 'card' }",
+            "parameters": "sem (semantic style token)",
+            "examples": "{ \"sem\": \"h2\" }",
+            "relatedTopics": "Theme Tokens, Typography, Component Styling",
+            "tags": [
+              "config",
+              "component"
+            ],
+            "lastUpdated": "2025-10-08",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Semantic Styles.md",
+              "properties": {
+                "sticker": "✨",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1740214610875-81a39ed81f08?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxzZW1hbnRpYyUyMHN0eWxlc3xlbnwwfDB8fHwxNzYxODM3MDg2fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Using semantic style tokens for consistent component styling",
+                "category": "Configuration",
+                "subcategory": "Styling",
+                "icon": "✨",
+                "image": "'https://images.unsplash.com/photo-1561070791-2526d30994b5'",
+                "content": "|-",
+                "syntax": "'{ sem: ''h1'' | ''h2'' | ''h3'' | ''button'' | ''button-primary'' | ''card'' }'",
+                "parameters": "sem (semantic style token)",
+                "examples": "'{ \"sem\": \"h2\" }'",
+                "relatedTopics": "'Theme Tokens, Typography, Component Styling'",
+                "tags": "",
+                "lastUpdated": "'2025-10-08'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.874Z",
+            "generator": "space-gen"
+          },
+          "name": "SimpleContext Interface",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/SimpleContext Interface",
+          "definition": {
+            "defaultSticker": "💾"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1591381287254-b3349c60bf9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxzaW1wbGVjb250ZXh0JTIwaW50ZXJmYWNlfGVufDB8MHx8fDE3NjE4MzcwODN8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "SimpleContext Interface",
+            "description": "Reference for context structure, columns, rows, and views",
+            "category": "Data Types",
+            "subcategory": "Context Structure",
+            "icon": "💾",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+            "content": "# SimpleContext Interface\n\nContexts manage data storage and retrieval...",
+            "syntax": "{ id: string, name: string, primary: boolean, columns: SimpleColumn[], rows: any[], views?: SimpleView[] }",
+            "parameters": "id (required), name (required), primary (required), columns (required), rows (required), views (optional)",
+            "examples": "[{ \"id\": \"tasks\", \"name\": \"Tasks\", \"primary\": true, \"columns\": [...] }]",
+            "relatedTopics": "SimpleColumn, SimpleView, Context Properties",
+            "tags": [
+              "type",
+              "context"
+            ],
+            "lastUpdated": "2025-10-14",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "SimpleContext Interface.md",
+              "properties": {
+                "sticker": "\"\\U0001F4BE\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1591381287254-b3349c60bf9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxzaW1wbGVjb250ZXh0JTIwaW50ZXJmYWNlfGVufDB8MHx8fDE3NjE4MzcwODN8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "'Reference for context structure, columns, rows, and views'",
+                "category": "Data Types",
+                "subcategory": "Context Structure",
+                "icon": "\"\\U0001F4BE\"",
+                "image": "'https://images.unsplash.com/photo-1558494949-ef010cbdcc31'",
+                "content": "|-",
+                "syntax": ">-",
+                "{ id": "string, name: string, primary: boolean, columns: SimpleColumn[], rows:",
+                "any[], views?": "SimpleView[] }",
+                "parameters": ">-",
+                "examples": "'[{ \"id\": \"tasks\", \"name\": \"Tasks\", \"primary\": true, \"columns\": [...] }]'",
+                "relatedTopics": "'SimpleColumn, SimpleView, Context Properties'",
+                "tags": "",
+                "lastUpdated": "'2025-10-14'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.874Z",
+            "generator": "space-gen"
+          },
+          "name": "SimpleFrame Interface",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/SimpleFrame Interface",
+          "definition": {
+            "defaultSticker": "🖼️"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1591381287254-b3349c60bf9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxzaW1wbGVmcmFtZSUyMGludGVyZmFjZXxlbnwwfDB8fHwxNzYxODM3MDgyfDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "SimpleFrame Interface",
+            "description": "Complete reference for the SimpleFrame interface and all frame types",
+            "category": "Components",
+            "subcategory": "Frame Types",
+            "icon": "🖼️",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+            "content": "# SimpleFrame Interface\n\nThe SimpleFrame interface defines the structure of UI components...",
+            "syntax": "{ type: SimpleFrameType, props?: any, styles?: any, children?: SimpleFrame[] }",
+            "parameters": "type (required), props (optional), styles (optional), children (optional), name (optional)",
+            "examples": "{ \"type\": \"group\", \"children\": [...] }",
+            "relatedTopics": "SimpleFrameType, Frame Properties, Styling",
+            "tags": [
+              "component",
+              "frame"
+            ],
+            "lastUpdated": "2025-10-15",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "SimpleFrame Interface.md",
+              "properties": {
+                "sticker": "\"\\U0001F5BC️\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1591381287254-b3349c60bf9b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxzaW1wbGVmcmFtZSUyMGludGVyZmFjZXxlbnwwfDB8fHwxNzYxODM3MDgyfDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Complete reference for the SimpleFrame interface and all frame types",
+                "category": "Components",
+                "subcategory": "Frame Types",
+                "icon": "\"\\U0001F5BC️\"",
+                "image": "'https://images.unsplash.com/photo-1551288049-bebda4e38f71'",
+                "content": "|-",
+                "syntax": "'{ type: SimpleFrameType, props?: any, styles?: any, children?: SimpleFrame[] }'",
+                "parameters": ">-",
+                "examples": "'{ \"type\": \"group\", \"children\": [...] }'",
+                "relatedTopics": "'SimpleFrameType, Frame Properties, Styling'",
+                "tags": "",
+                "lastUpdated": "'2025-10-15'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.875Z",
+            "generator": "space-gen"
+          },
+          "name": "Space Configuration",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/Space Configuration",
+          "definition": {
+            "defaultSticker": "🏠"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1507759307406-da169254d741?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxzcGFjZSUyMGNvbmZpZ3VyYXRpb258ZW58MHwwfHx8MTc2MTgzNzA4N3ww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Space Configuration",
+            "description": "SimpleSpace interface for configuring space metadata",
+            "category": "Configuration",
+            "subcategory": "Space Setup",
+            "icon": "🏠",
+            "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
+            "content": "# Space Configuration\n\nThe SimpleSpace interface defines space metadata...",
+            "syntax": "{ name: string, sticker: string, cover: string, description: string }",
+            "parameters": "name (required), sticker (emoji icon), cover (Unsplash description), description (text)",
+            "examples": "{ \"name\": \"My Space\", \"sticker\": \"📦\", \"description\": \"A space for...\" }",
+            "relatedTopics": "Space Structure, Metadata, Cover Images",
+            "tags": [
+              "config",
+              "space"
+            ],
+            "lastUpdated": "2025-10-05",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Space Configuration.md",
+              "properties": {
+                "sticker": "\"\\U0001F3E0\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1507759307406-da169254d741?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxzcGFjZSUyMGNvbmZpZ3VyYXRpb258ZW58MHwwfHx8MTc2MTgzNzA4N3ww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "SimpleSpace interface for configuring space metadata",
+                "category": "Configuration",
+                "subcategory": "Space Setup",
+                "icon": "\"\\U0001F3E0\"",
+                "image": "'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b'",
+                "content": "|-",
+                "syntax": "'{ name: string, sticker: string, cover: string, description: string }'",
+                "parameters": ">-",
+                "examples": "\"{ \\\"name\\\": \\\"My Space\\\", \\\"sticker\\\": \\\"\\U0001F4E6\\\", \\\"description\\\": \\\"A space for...\\\" }\"",
+                "relatedTopics": "'Space Structure, Metadata, Cover Images'",
+                "tags": "",
+                "lastUpdated": "'2025-10-05'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.875Z",
+            "generator": "space-gen"
+          },
+          "name": "Theme Tokens",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/Theme Tokens",
+          "definition": {
+            "defaultSticker": "🎨"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1642752960957-174b8642283a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHx0aGVtZSUyMHRva2Vuc3xlbnwwfDB8fHwxNzYxODM3MDg0fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Theme Tokens",
+            "description": "CSS variables and theme tokens for consistent styling",
+            "category": "Configuration",
+            "subcategory": "Theming",
+            "icon": "🎨",
+            "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+            "content": "# Theme Tokens\n\nUse CSS variables for consistent, theme-aware styling...",
+            "syntax": "var(--mk-ui-text-primary)",
+            "parameters": "Color tokens, spacing tokens, semantic tokens",
+            "examples": "{ \"color\": \"var(--mk-ui-text-primary)\" }",
+            "relatedTopics": "Styling, Semantic Styles, Responsive Design",
+            "tags": [
+              "config",
+              "component"
+            ],
+            "lastUpdated": "2025-10-11",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Theme Tokens.md",
+              "properties": {
+                "sticker": "\"\\U0001F3A8\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1642752960957-174b8642283a?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHx0aGVtZSUyMHRva2Vuc3xlbnwwfDB8fHwxNzYxODM3MDg0fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "CSS variables and theme tokens for consistent styling",
+                "category": "Configuration",
+                "subcategory": "Theming",
+                "icon": "\"\\U0001F3A8\"",
+                "image": "'https://images.unsplash.com/photo-1561070791-2526d30994b5'",
+                "content": "|-",
+                "syntax": "var(--mk-ui-text-primary)",
+                "parameters": "'Color tokens, spacing tokens, semantic tokens'",
+                "examples": "'{ \"color\": \"var(--mk-ui-text-primary)\" }'",
+                "relatedTopics": "'Styling, Semantic Styles, Responsive Design'",
+                "tags": "",
+                "lastUpdated": "'2025-10-11'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.877Z",
+            "generator": "space-gen"
+          },
+          "name": "View Types Reference",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Reference/View Types Reference",
+          "definition": {
+            "defaultSticker": "👁️"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1705357311681-17449eb278d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8dmlldyUyMHR5cGVzJTIwcmVmZXJlbmNlfGVufDB8fHx8MTc2MTgzNzA4NHww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "View Types Reference",
+            "description": "Complete list of available view types and their configurations",
+            "category": "Views",
+            "subcategory": "View Configuration",
+            "icon": "👁️",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+            "content": "# View Types Reference\n\nMake.md supports multiple view types for displaying data...",
+            "syntax": "{ id: string, type: ViewType, name: string, showFields: string[], filters?: Filter[] }",
+            "parameters": "id, type (list|table|cards|gallery|board|calendar|flow|catalog|details|tasks|folder), name, showFields",
+            "examples": "{ \"id\": \"tasks-view\", \"type\": \"table\", \"showFields\": [\"title\", \"status\"] }",
+            "relatedTopics": "Context Views, Filter Configuration, Sorting",
+            "tags": [
+              "view",
+              "context"
+            ],
+            "lastUpdated": "2025-10-12",
+            "apiVersion": "1.0"
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "View Types Reference.md",
+              "properties": {
+                "sticker": "\"\\U0001F441️\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1705357311681-17449eb278d1?crop=entropy&cs=srgb&fm=jpg&ixid=M3wxMjA3fDB8MXxzZWFyY2h8MXx8dmlldyUyMHR5cGVzJTIwcmVmZXJlbmNlfGVufDB8fHx8MTc2MTgzNzA4NHww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Complete list of available view types and their configurations",
+                "category": "Views",
+                "subcategory": "View Configuration",
+                "icon": "\"\\U0001F441️\"",
+                "image": "'https://images.unsplash.com/photo-1460925895917-afdab827c52f'",
+                "content": "|-",
+                "syntax": ">-",
+                "{ id": "string, type: ViewType, name: string, showFields: string[], filters?:",
+                "parameters": ">-",
+                "examples": "'{ \"id\": \"tasks-view\", \"type\": \"table\", \"showFields\": [\"title\", \"status\"] }'",
+                "relatedTopics": "'Context Views, Filter Configuration, Sorting'",
+                "tags": "",
+                "lastUpdated": "'2025-10-12'",
+                "apiVersion": "'1.0'"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        }
+      ],
+      "notes": [],
+      "assets": [],
+      "templates": [],
+      "content": ""
+    },
+    {
+      "meta": {
+        "version": "1.0.0",
+        "generated": "2025-10-30T15:11:33.877Z",
+        "generator": "space-gen"
+      },
+      "name": "Tutorials",
+      "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials",
+      "definition": {
+        "defaultSticker": "emoji//1f3af",
+        "fullWidth": true,
+        "defaultColor": "#4CAF50"
+      },
+      "properties": {
+        "cover": "https://images.unsplash.com/photo-1580894894513-541e068a3e2b?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxoYW5kcy1vbiUyMGxlYXJuaW5nJTIwd29ya3NwYWNlJTIwd2l0aCUyMGNvZGUlMjBleGFtcGxlcyUyQyUyMGlufGVufDB8MHx8fDE3NjE4MzcwOTN8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80"
+      },
+      "context": {
+        "files": {
+          "schema": {
+            "id": "files",
+            "name": "Tutorial Lessons",
+            "type": "db",
+            "def": "{\"icon\":\"ui//database\"}",
+            "predicate": "",
+            "primary": "true"
+          },
+          "cols": [
+            {
+              "name": "File",
+              "schemaId": "files",
+              "type": "file",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": "true"
+            },
+            {
+              "name": "description",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "category",
+              "schemaId": "files",
+              "type": "option",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "difficulty",
+              "schemaId": "files",
+              "type": "option",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "duration",
+              "schemaId": "files",
+              "type": "number",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "icon",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "image",
+              "schemaId": "files",
+              "type": "image",
+              "value": "",
+              "hidden": "1",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "content",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "codeExamples",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "prerequisites",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "learningOutcomes",
+              "schemaId": "files",
+              "type": "text",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "tags",
+              "schemaId": "files",
+              "type": "option-multi",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "publishedDate",
+              "schemaId": "files",
+              "type": "date",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "lastUpdated",
+              "schemaId": "files",
+              "type": "date",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "views",
+              "schemaId": "files",
+              "type": "number",
+              "value": "",
+              "hidden": "",
+              "attrs": "",
+              "unique": "",
+              "primary": ""
+            }
+          ],
+          "rows": [
+            {
+              "File": "./Creating Your First Space",
+              "description": "Step-by-step guide to creating and configuring a new space from scratch",
+              "category": "Spaces",
+              "difficulty": "Beginner",
+              "duration": "15",
+              "icon": "📦",
+              "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
+              "content": "# Creating Your First Space\n\nIn this tutorial, you'll learn how to create a space...",
+              "codeExamples": "{\n  \"name\": \"My First Space\",\n  \"sticker\": \"📦\",\n  \"description\": \"A simple space example\"\n}",
+              "prerequisites": "Basic understanding of Make.md interface",
+              "learningOutcomes": "Create spaces, configure properties, understand space structure",
+              "tags": "[\"beginner\",\"spaces\"]",
+              "publishedDate": "2025-10-01",
+              "lastUpdated": "2025-10-15",
+              "views": "245"
+            },
+            {
+              "File": "./Building a Simple Frame Layout",
+              "description": "Learn to construct frame layouts with containers, groups, and basic components",
+              "category": "Frames",
+              "difficulty": "Beginner",
+              "duration": "20",
+              "icon": "🖼️",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+              "content": "# Building a Simple Frame Layout\n\nFrames are the foundation of your UI...",
+              "codeExamples": "{\n  \"type\": \"group\",\n  \"children\": [\n    { \"type\": \"card\" }\n  ]\n}",
+              "prerequisites": "Understanding of spaces",
+              "learningOutcomes": "Create frame structures, use containers and groups, organize layouts",
+              "tags": "[\"beginner\",\"frames\"]",
+              "publishedDate": "2025-10-02",
+              "lastUpdated": "2025-10-14",
+              "views": "189"
+            },
+            {
+              "File": "./Working with Context Data",
+              "description": "Master context creation, column definitions, and data management",
+              "category": "Contexts",
+              "difficulty": "Intermediate",
+              "duration": "25",
+              "icon": "💾",
+              "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+              "content": "# Working with Context Data\n\nContexts store and manage your application data...",
+              "codeExamples": "{\n  \"name\": \"Tasks\",\n  \"columns\": [\n    { \"name\": \"title\", \"type\": \"text\", \"primary\": true }\n  ]\n}",
+              "prerequisites": "Understanding of frames and spaces",
+              "learningOutcomes": "Define contexts, create columns, manage data rows",
+              "tags": "[\"intermediate\",\"contexts\",\"data\"]",
+              "publishedDate": "2025-10-03",
+              "lastUpdated": "2025-10-13",
+              "views": "178"
+            },
+            {
+              "File": "./Creating Dynamic Views",
+              "description": "Build table, card, and list views with filters and sorting",
+              "category": "Contexts",
+              "difficulty": "Intermediate",
+              "duration": "30",
+              "icon": "👁️",
+              "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+              "content": "# Creating Dynamic Views\n\nViews display your context data in different formats...",
+              "codeExamples": "{\n  \"id\": \"tasks-view\",\n  \"type\": \"table\",\n  \"showFields\": [\"title\", \"status\"]\n}",
+              "prerequisites": "Working knowledge of contexts",
+              "learningOutcomes": "Create views, apply filters, configure sorting, use different view types",
+              "tags": "[\"intermediate\",\"views\",\"contexts\"]",
+              "publishedDate": "2025-10-04",
+              "lastUpdated": "2025-10-12",
+              "views": "156"
+            },
+            {
+              "File": "./Using Frame Properties and Aggregates",
+              "description": "Implement calculated properties, aggregates, and formulas in frames",
+              "category": "Frames",
+              "difficulty": "Advanced",
+              "duration": "35",
+              "icon": "🔢",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+              "content": "# Using Frame Properties and Aggregates\n\nProperties enable dynamic calculated values...",
+              "codeExamples": "{\n  \"totalTasks\": {\n    \"type\": \"aggregate\",\n    \"config\": {\n      \"aggregate\": { \"schema\": \"tasks\", \"fn\": \"count\" }\n    }\n  }\n}",
+              "prerequisites": "Understanding of frames and contexts",
+              "learningOutcomes": "Define frame properties, use aggregates, create formulas, reference values",
+              "tags": "[\"advanced\",\"properties\",\"frames\"]",
+              "publishedDate": "2025-10-05",
+              "lastUpdated": "2025-10-11",
+              "views": "134"
+            },
+            {
+              "File": "./Building a Dashboard Layout",
+              "description": "Create a complete dashboard with metrics, charts, and data views",
+              "category": "Workflows",
+              "difficulty": "Intermediate",
+              "duration": "40",
+              "icon": "📊",
+              "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+              "content": "# Building a Dashboard Layout\n\nDashboards combine metrics and visualizations...",
+              "codeExamples": "{\n  \"type\": \"container\",\n  \"styles\": { \"layout\": \"row\" },\n  \"children\": [ /* metrics */ ]\n}",
+              "prerequisites": "Frame and context knowledge",
+              "learningOutcomes": "Design dashboard layouts, implement metrics, organize information",
+              "tags": "[\"intermediate\",\"workflows\",\"frames\"]",
+              "publishedDate": "2025-10-06",
+              "lastUpdated": "2025-10-10",
+              "views": "167"
+            },
+            {
+              "File": "./Advanced Context Relationships",
+              "description": "Implement context references, many-to-many relationships, and linked data",
+              "category": "Advanced",
+              "difficulty": "Advanced",
+              "duration": "45",
+              "icon": "🔗",
+              "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+              "content": "# Advanced Context Relationships\n\nComplex data models require relationship handling...",
+              "codeExamples": "{\n  \"type\": \"context\",\n  \"config\": {\n    \"space\": \"./Projects\"\n  }\n}",
+              "prerequisites": "Strong understanding of contexts",
+              "learningOutcomes": "Create context references, build relationship models, handle complex data",
+              "tags": "[\"advanced\",\"contexts\",\"data\"]",
+              "publishedDate": "2025-10-07",
+              "lastUpdated": "2025-10-09",
+              "views": "112"
+            },
+            {
+              "File": "./Styling with Theme Tokens",
+              "description": "Master theme tokens, semantic styles, and responsive design",
+              "category": "Frames",
+              "difficulty": "Intermediate",
+              "duration": "25",
+              "icon": "🎨",
+              "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+              "content": "# Styling with Theme Tokens\n\nTheme tokens ensure consistent styling...",
+              "codeExamples": "{\n  \"styles\": {\n    \"color\": \"var(--mk-ui-text-primary)\",\n    \"sem\": \"h2\"\n  }\n}",
+              "prerequisites": "Frame building experience",
+              "learningOutcomes": "Use theme tokens, apply semantic styles, create responsive layouts",
+              "tags": "[\"intermediate\",\"frames\"]",
+              "publishedDate": "2025-10-08",
+              "lastUpdated": "2025-10-08",
+              "views": "145"
+            },
+            {
+              "File": "./Interactive Components and Actions",
+              "description": "Add interactivity with buttons, links, and action handlers",
+              "category": "Frames",
+              "difficulty": "Advanced",
+              "duration": "30",
+              "icon": "⚡",
+              "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+              "content": "# Interactive Components and Actions\n\nMake your spaces interactive with actions...",
+              "codeExamples": "{\n  \"type\": \"button\",\n  \"props\": {\n    \"onClick\": {\n      \"namespace\": \"table\",\n      \"method\": \"insert\"\n    }\n  }\n}",
+              "prerequisites": "Frame and component knowledge",
+              "learningOutcomes": "Add click handlers, implement navigation, use action API",
+              "tags": "[\"advanced\",\"frames\",\"workflows\"]",
+              "publishedDate": "2025-10-09",
+              "lastUpdated": "2025-10-07",
+              "views": "128"
+            },
+            {
+              "File": "./Building a Complete App Workflow",
+              "description": "End-to-end tutorial creating a full functional application",
+              "category": "Workflows",
+              "difficulty": "Advanced",
+              "duration": "60",
+              "icon": "🚀",
+              "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984",
+              "content": "# Building a Complete App Workflow\n\nCombine all concepts to build a complete app...",
+              "codeExamples": "/* Complete app structure example */",
+              "prerequisites": "All previous tutorials",
+              "learningOutcomes": "Design full applications, integrate all features, optimize workflows",
+              "tags": "[\"advanced\",\"workflows\"]",
+              "publishedDate": "2025-10-10",
+              "lastUpdated": "2025-10-06",
+              "views": "203"
+            }
+          ]
+        }
+      },
+      "frames": {
+        "main": {
+          "schema": {
+            "id": "main",
+            "name": "Tutorials",
+            "type": "frame",
+            "def": "{}",
+            "predicate": "",
+            "primary": ""
+          },
+          "cols": [
+            {
+              "name": "tutorialCount",
+              "schemaId": "main",
+              "type": "aggregate",
+              "value": "{\"alias\":\"Total Tutorials\",\"field\":\"File\",\"fn\":\"count\",\"schema\":\"files\"}",
+              "hidden": "",
+              "attrs": "{\"icon\":\"emoji//1f3af\"}",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "avgDuration",
+              "schemaId": "main",
+              "type": "aggregate",
+              "value": "{\"alias\":\"️ Avg Duration\",\"field\":\"duration\",\"fn\":\"avg\",\"schema\":\"files\"}",
+              "hidden": "",
+              "attrs": "{\"icon\":\"emoji//23f1\"}",
+              "unique": "",
+              "primary": ""
+            },
+            {
+              "name": "popularCount",
+              "schemaId": "main",
+              "type": "aggregate",
+              "value": "{\"alias\":\"Most Viewed\",\"field\":\"views\",\"fn\":\"max\",\"schema\":\"files\"}",
+              "hidden": "",
+              "attrs": "{\"icon\":\"emoji//1f525\"}",
+              "unique": "",
+              "primary": ""
+            }
+          ],
+          "rows": [
+            {
+              "id": "main",
+              "schemaId": "main",
+              "parentId": "",
+              "name": "Tutorials",
+              "type": "group",
+              "rank": "0",
+              "props": "{\"tutorialCount\":\"0\",\"avgDuration\":\"0\",\"popularCount\":\"0\"}",
+              "styles": "{\"layout\":\"\\\"column\\\"\",\"gap\":\"24\"}"
+            },
+            {
+              "id": "container23",
+              "schemaId": "main",
+              "parentId": "main",
+              "name": "Metrics Section",
+              "type": "group",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"layout\":\"\\\"row\\\"\",\"width\":\"\\\"100%\\\"\",\"gap\":\"16\",\"marginBottom\":\"16\"}"
+            },
+            {
+              "id": "column34",
+              "schemaId": "main",
+              "parentId": "container23",
+              "name": "column",
+              "type": "column",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+            },
+            {
+              "id": "card42",
+              "schemaId": "main",
+              "parentId": "column34",
+              "name": "Total Tutorials Card",
+              "type": "group",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"20px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+            },
+            {
+              "id": "text159",
+              "schemaId": "main",
+              "parentId": "card42",
+              "name": "text",
+              "type": "text",
+              "rank": "0",
+              "props": "{\"value\":\"\\\"🎯\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+            },
+            {
+              "id": "text160",
+              "schemaId": "main",
+              "parentId": "card42",
+              "name": "text",
+              "type": "data",
+              "rank": "1",
+              "props": "{\"field\":\"$contexts.$properties['tutorialCount']\",\"value\":\"main.props['tutorialCount']\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"24px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+            },
+            {
+              "id": "text161",
+              "schemaId": "main",
+              "parentId": "card42",
+              "name": "text",
+              "type": "text",
+              "rank": "2",
+              "props": "{\"value\":\"\\\"Total Tutorials\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"13px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+            },
+            {
+              "id": "column35",
+              "schemaId": "main",
+              "parentId": "container23",
+              "name": "column",
+              "type": "column",
+              "rank": "1",
+              "props": "{}",
+              "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+            },
+            {
+              "id": "card43",
+              "schemaId": "main",
+              "parentId": "column35",
+              "name": "Avg Duration Card",
+              "type": "group",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"20px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+            },
+            {
+              "id": "text162",
+              "schemaId": "main",
+              "parentId": "card43",
+              "name": "text",
+              "type": "text",
+              "rank": "0",
+              "props": "{\"value\":\"\\\"⏱️\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+            },
+            {
+              "id": "text163",
+              "schemaId": "main",
+              "parentId": "card43",
+              "name": "text",
+              "type": "data",
+              "rank": "1",
+              "props": "{\"field\":\"$contexts.$properties['avgDuration']\",\"value\":\"main.props['avgDuration']\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"24px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+            },
+            {
+              "id": "text164",
+              "schemaId": "main",
+              "parentId": "card43",
+              "name": "text",
+              "type": "text",
+              "rank": "2",
+              "props": "{\"value\":\"\\\"Avg Minutes\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"13px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+            },
+            {
+              "id": "column36",
+              "schemaId": "main",
+              "parentId": "container23",
+              "name": "column",
+              "type": "column",
+              "rank": "2",
+              "props": "{}",
+              "styles": "{\"layout\":\"\\\"column\\\"\",\"layoutAlign\":\"\\\"left\\\"\",\"flex\":\"\\\"1\\\"\",\"gap\":\"\\\"16px\\\"\"}"
+            },
+            {
+              "id": "card44",
+              "schemaId": "main",
+              "parentId": "column36",
+              "name": "Most Viewed Card",
+              "type": "group",
+              "rank": "0",
+              "props": "{}",
+              "styles": "{\"sem\":\"\\\"card\\\"\",\"width\":\"\\\"100%\\\"\",\"height\":\"\\\"100%\\\"\",\"padding\":\"\\\"20px\\\"\",\"textAlign\":\"\\\"center\\\"\"}"
+            },
+            {
+              "id": "text165",
+              "schemaId": "main",
+              "parentId": "card44",
+              "name": "text",
+              "type": "text",
+              "rank": "0",
+              "props": "{\"value\":\"\\\"🔥\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"28px\\\"\",\"marginBottom\":\"\\\"8px\\\"\"}"
+            },
+            {
+              "id": "text166",
+              "schemaId": "main",
+              "parentId": "card44",
+              "name": "text",
+              "type": "data",
+              "rank": "1",
+              "props": "{\"field\":\"$contexts.$properties['popularCount']\",\"value\":\"main.props['popularCount']\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"24px\\\"\",\"--font-text-weight\":\"\\\"600\\\"\",\"marginBottom\":\"\\\"4px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-primary)\\\"\"}"
+            },
+            {
+              "id": "text167",
+              "schemaId": "main",
+              "parentId": "card44",
+              "name": "text",
+              "type": "text",
+              "rank": "2",
+              "props": "{\"value\":\"\\\"Most Views\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--font-text-size\":\"\\\"13px\\\"\",\"--font-text-color\":\"\\\"var(--mk-ui-text-secondary)\\\"\"}"
+            },
+            {
+              "id": "context12",
+              "schemaId": "main",
+              "parentId": "main",
+              "name": "context",
+              "type": "view",
+              "rank": "1",
+              "props": "{\"value\":\"\\\"all-tutorials\\\"\"}",
+              "styles": "{\"width\":\"\\\"100%\\\"\",\"--mk-min-mode\":\"\\\"true\\\"\",\"--mk-expanded\":\"\\\"true\\\"\"}"
+            }
+          ]
+        },
+        "all-tutorials": {
+          "schema": {
+            "id": "all-tutorials",
+            "name": "All Tutorials",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"showViews\":true}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"sort\":[{\"field\":\"views\",\"dir\":\"desc\"}],\"colsHidden\":[\"icon\",\"content\",\"codeExamples\",\"prerequisites\",\"learningOutcomes\",\"tags\",\"publishedDate\",\"lastUpdated\",\"views\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"}}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "featured-tutorials": {
+          "schema": {
+            "id": "featured-tutorials",
+            "name": "Featured",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"sort\":[{\"field\":\"views\",\"dir\":\"desc\"}],\"colsHidden\":[\"icon\",\"content\",\"codeExamples\",\"prerequisites\",\"learningOutcomes\",\"tags\",\"publishedDate\",\"lastUpdated\",\"views\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"},\"limit\":4}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "table-view": {
+          "schema": {
+            "id": "table-view",
+            "name": "Table View",
+            "type": "view",
+            "def": "{\"icon\":\"ui//table\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"table\",\"listView\":\"spaces://$kit/#*tableView\",\"listGroup\":\"spaces://$kit/#*tableGroup\",\"listItem\":\"spaces://$kit/#*tableItem\",\"icon\":\"ui//table\",\"db\":\"files\",\"sort\":[{\"field\":\"lastUpdated\",\"dir\":\"desc\"}],\"colsHidden\":[\"description\",\"icon\",\"image\",\"content\",\"codeExamples\",\"prerequisites\",\"learningOutcomes\",\"tags\",\"publishedDate\"]}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "spaces-category": {
+          "schema": {
+            "id": "spaces-category",
+            "name": "Spaces",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"filters\":[{\"field\":\"category\",\"fn\":\"equals\",\"value\":\"Spaces\"}],\"colsHidden\":[\"category\",\"icon\",\"content\",\"codeExamples\",\"prerequisites\",\"learningOutcomes\",\"tags\",\"publishedDate\",\"lastUpdated\",\"views\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"}}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "frames-category": {
+          "schema": {
+            "id": "frames-category",
+            "name": "Frames",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"filters\":[{\"field\":\"category\",\"fn\":\"equals\",\"value\":\"Frames\"}],\"colsHidden\":[\"category\",\"icon\",\"content\",\"codeExamples\",\"prerequisites\",\"learningOutcomes\",\"tags\",\"publishedDate\",\"lastUpdated\",\"views\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"}}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "contexts-category": {
+          "schema": {
+            "id": "contexts-category",
+            "name": "Contexts",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"filters\":[{\"field\":\"category\",\"fn\":\"equals\",\"value\":\"Contexts\"}],\"colsHidden\":[\"category\",\"icon\",\"content\",\"codeExamples\",\"prerequisites\",\"learningOutcomes\",\"tags\",\"publishedDate\",\"lastUpdated\",\"views\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"}}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "beginner-tutorials": {
+          "schema": {
+            "id": "beginner-tutorials",
+            "name": "Beginner",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"filters\":[{\"field\":\"difficulty\",\"fn\":\"equals\",\"value\":\"Beginner\"}],\"colsHidden\":[\"category\",\"difficulty\",\"icon\",\"content\",\"codeExamples\",\"prerequisites\",\"learningOutcomes\",\"tags\",\"publishedDate\",\"lastUpdated\",\"views\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"}}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "intermediate-tutorials": {
+          "schema": {
+            "id": "intermediate-tutorials",
+            "name": "Intermediate",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"filters\":[{\"field\":\"difficulty\",\"fn\":\"equals\",\"value\":\"Intermediate\"}],\"colsHidden\":[\"category\",\"difficulty\",\"icon\",\"content\",\"codeExamples\",\"prerequisites\",\"learningOutcomes\",\"tags\",\"publishedDate\",\"lastUpdated\",\"views\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"}}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        },
+        "advanced-tutorials": {
+          "schema": {
+            "id": "advanced-tutorials",
+            "name": "Advanced",
+            "type": "view",
+            "def": "{\"icon\":\"ui//layout-dashboard\",\"db\":\"files\"}",
+            "predicate": "{\"view\":\"list\",\"listView\":\"spaces://$kit/#*listView\",\"listGroup\":\"spaces://$kit/#*gridGroup\",\"listItem\":\"spaces://$kit/#*cardsListItem\",\"icon\":\"ui//layout-dashboard\",\"db\":\"files\",\"filters\":[{\"field\":\"difficulty\",\"fn\":\"equals\",\"value\":\"Advanced\"}],\"colsHidden\":[\"category\",\"difficulty\",\"icon\",\"content\",\"codeExamples\",\"prerequisites\",\"learningOutcomes\",\"tags\",\"publishedDate\",\"lastUpdated\",\"views\"],\"listItemProps\":{\"coverProperty\":\"image\",\"imageField\":\"image\",\"previewField\":\"description\"}}",
+            "primary": ""
+          },
+          "cols": [],
+          "rows": []
+        }
+      },
+      "children": [
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.878Z",
+            "generator": "space-gen"
+          },
+          "name": "Advanced Context Relationships",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials/Advanced Context Relationships",
+          "definition": {
+            "defaultSticker": "🔗"
+          },
+          "properties": {
+            "alias": "Advanced Context Relationships",
+            "description": "Implement context references, many-to-many relationships, and linked data",
+            "category": "Advanced",
+            "difficulty": "Advanced",
+            "duration": 45,
+            "icon": "🔗",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+            "content": "# Advanced Context Relationships\n\nComplex data models require relationship handling...",
+            "codeExamples": "{\n  \"type\": \"context\",\n  \"config\": {\n    \"space\": \"./Projects\"\n  }\n}",
+            "prerequisites": "Strong understanding of contexts",
+            "learningOutcomes": "Create context references, build relationship models, handle complex data",
+            "tags": [
+              "advanced",
+              "contexts",
+              "data"
+            ],
+            "publishedDate": "2025-10-07",
+            "lastUpdated": "2025-10-09",
+            "views": 112
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Advanced Context Relationships.md",
+              "properties": {
+                "sticker": "\"\\U0001F517\"",
+                "description": "'Implement context references, many-to-many relationships, and linked data'",
+                "category": "Advanced",
+                "difficulty": "Advanced",
+                "duration": "45",
+                "icon": "\"\\U0001F517\"",
+                "image": "'https://images.unsplash.com/photo-1558494949-ef010cbdcc31'",
+                "content": "|-",
+                "codeExamples": "|-",
+                "\"type\"": "\"context\",",
+                "\"config\"": "{",
+                "\"space\"": "\"./Projects\"",
+                "prerequisites": "Strong understanding of contexts",
+                "learningOutcomes": "'Create context references, build relationship models, handle complex data'",
+                "tags": "",
+                "publishedDate": "'2025-10-07'",
+                "lastUpdated": "'2025-10-09'",
+                "views": "112"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.878Z",
+            "generator": "space-gen"
+          },
+          "name": "Building a Complete App Workflow",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials/Building a Complete App Workflow",
+          "definition": {
+            "defaultSticker": "🚀"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1648134859179-ed0c98f54519?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxidWlsZGluZyUyMGElMjBjb21wbGV0ZSUyMGFwcCUyMHdvcmtmbG93fGVufDB8MHx8fDE3NjE4MzcwOTJ8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Building a Complete App Workflow",
+            "description": "End-to-end tutorial creating a full functional application",
+            "category": "Workflows",
+            "difficulty": "Advanced",
+            "duration": 60,
+            "icon": "🚀",
+            "image": "https://images.unsplash.com/photo-1553877522-43269d4ea984",
+            "content": "# Building a Complete App Workflow\n\nCombine all concepts to build a complete app...",
+            "codeExamples": "/* Complete app structure example */",
+            "prerequisites": "All previous tutorials",
+            "learningOutcomes": "Design full applications, integrate all features, optimize workflows",
+            "tags": [
+              "advanced",
+              "workflows"
+            ],
+            "publishedDate": "2025-10-10",
+            "lastUpdated": "2025-10-06",
+            "views": 203
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Building a Complete App Workflow.md",
+              "properties": {
+                "sticker": "\"\\U0001F680\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1648134859179-ed0c98f54519?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxidWlsZGluZyUyMGElMjBjb21wbGV0ZSUyMGFwcCUyMHdvcmtmbG93fGVufDB8MHx8fDE3NjE4MzcwOTJ8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "End-to-end tutorial creating a full functional application",
+                "category": "Workflows",
+                "difficulty": "Advanced",
+                "duration": "60",
+                "icon": "\"\\U0001F680\"",
+                "image": "'https://images.unsplash.com/photo-1553877522-43269d4ea984'",
+                "content": "|-",
+                "codeExamples": "/* Complete app structure example */",
+                "prerequisites": "All previous tutorials",
+                "learningOutcomes": "'Design full applications, integrate all features, optimize workflows'",
+                "tags": "",
+                "publishedDate": "'2025-10-10'",
+                "lastUpdated": "'2025-10-06'",
+                "views": "203"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.879Z",
+            "generator": "space-gen"
+          },
+          "name": "Building a Dashboard Layout",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials/Building a Dashboard Layout",
+          "definition": {
+            "defaultSticker": "📊"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1578356667738-3ac5eb409354?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxidWlsZGluZyUyMGElMjBkYXNoYm9hcmQlMjBsYXlvdXR8ZW58MHwwfHx8MTc2MTgzNzA5MHww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Building a Dashboard Layout",
+            "description": "Create a complete dashboard with metrics, charts, and data views",
+            "category": "Workflows",
+            "difficulty": "Intermediate",
+            "duration": 40,
+            "icon": "📊",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+            "content": "# Building a Dashboard Layout\n\nDashboards combine metrics and visualizations...",
+            "codeExamples": "{\n  \"type\": \"container\",\n  \"styles\": { \"layout\": \"row\" },\n  \"children\": [ /* metrics */ ]\n}",
+            "prerequisites": "Frame and context knowledge",
+            "learningOutcomes": "Design dashboard layouts, implement metrics, organize information",
+            "tags": [
+              "intermediate",
+              "workflows",
+              "frames"
+            ],
+            "publishedDate": "2025-10-06",
+            "lastUpdated": "2025-10-10",
+            "views": 167
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Building a Dashboard Layout.md",
+              "properties": {
+                "sticker": "\"\\U0001F4CA\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1578356667738-3ac5eb409354?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxidWlsZGluZyUyMGElMjBkYXNoYm9hcmQlMjBsYXlvdXR8ZW58MHwwfHx8MTc2MTgzNzA5MHww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "'Create a complete dashboard with metrics, charts, and data views'",
+                "category": "Workflows",
+                "difficulty": "Intermediate",
+                "duration": "40",
+                "icon": "\"\\U0001F4CA\"",
+                "image": "'https://images.unsplash.com/photo-1551288049-bebda4e38f71'",
+                "content": "|-",
+                "codeExamples": "|-",
+                "\"type\"": "\"container\",",
+                "\"styles\"": "{ \"layout\": \"row\" },",
+                "\"children\"": "[ /* metrics */ ]",
+                "prerequisites": "Frame and context knowledge",
+                "learningOutcomes": "'Design dashboard layouts, implement metrics, organize information'",
+                "tags": "",
+                "publishedDate": "'2025-10-06'",
+                "lastUpdated": "'2025-10-10'",
+                "views": "167"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.879Z",
+            "generator": "space-gen"
+          },
+          "name": "Building a Simple Frame Layout",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials/Building a Simple Frame Layout",
+          "definition": {
+            "defaultSticker": "🖼️"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1626846116799-ad61f874f99d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxidWlsZGluZyUyMGElMjBzaW1wbGUlMjBmcmFtZSUyMGxheW91dHxlbnwwfDB8fHwxNzYxODM3MDg4fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Building a Simple Frame Layout",
+            "description": "Learn to construct frame layouts with containers, groups, and basic components",
+            "category": "Frames",
+            "difficulty": "Beginner",
+            "duration": 20,
+            "icon": "🖼️",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+            "content": "# Building a Simple Frame Layout\n\nFrames are the foundation of your UI...",
+            "codeExamples": "{\n  \"type\": \"group\",\n  \"children\": [\n    { \"type\": \"card\" }\n  ]\n}",
+            "prerequisites": "Understanding of spaces",
+            "learningOutcomes": "Create frame structures, use containers and groups, organize layouts",
+            "tags": [
+              "beginner",
+              "frames"
+            ],
+            "publishedDate": "2025-10-02",
+            "lastUpdated": "2025-10-14",
+            "views": 189
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Building a Simple Frame Layout.md",
+              "properties": {
+                "sticker": "\"\\U0001F5BC️\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1626846116799-ad61f874f99d?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxidWlsZGluZyUyMGElMjBzaW1wbGUlMjBmcmFtZSUyMGxheW91dHxlbnwwfDB8fHwxNzYxODM3MDg4fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "'Learn to construct frame layouts with containers, groups, and basic components'",
+                "category": "Frames",
+                "difficulty": "Beginner",
+                "duration": "20",
+                "icon": "\"\\U0001F5BC️\"",
+                "image": "'https://images.unsplash.com/photo-1551288049-bebda4e38f71'",
+                "content": "|-",
+                "codeExamples": "|-",
+                "\"type\"": "\"group\",",
+                "\"children\"": "[",
+                "{ \"type\"": "\"card\" }",
+                "prerequisites": "Understanding of spaces",
+                "learningOutcomes": "'Create frame structures, use containers and groups, organize layouts'",
+                "tags": "",
+                "publishedDate": "'2025-10-02'",
+                "lastUpdated": "'2025-10-14'",
+                "views": "189"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.879Z",
+            "generator": "space-gen"
+          },
+          "name": "Creating Dynamic Views",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials/Creating Dynamic Views",
+          "definition": {
+            "defaultSticker": "👁️"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1603947214066-71b4061f5771?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxjcmVhdGluZyUyMGR5bmFtaWMlMjB2aWV3c3xlbnwwfDB8fHwxNzYxODM3MDg5fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Creating Dynamic Views",
+            "description": "Build table, card, and list views with filters and sorting",
+            "category": "Contexts",
+            "difficulty": "Intermediate",
+            "duration": 30,
+            "icon": "👁️",
+            "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+            "content": "# Creating Dynamic Views\n\nViews display your context data in different formats...",
+            "codeExamples": "{\n  \"id\": \"tasks-view\",\n  \"type\": \"table\",\n  \"showFields\": [\"title\", \"status\"]\n}",
+            "prerequisites": "Working knowledge of contexts",
+            "learningOutcomes": "Create views, apply filters, configure sorting, use different view types",
+            "tags": [
+              "intermediate",
+              "views",
+              "contexts"
+            ],
+            "publishedDate": "2025-10-04",
+            "lastUpdated": "2025-10-12",
+            "views": 156
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Creating Dynamic Views.md",
+              "properties": {
+                "sticker": "\"\\U0001F441️\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1603947214066-71b4061f5771?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxjcmVhdGluZyUyMGR5bmFtaWMlMjB2aWV3c3xlbnwwfDB8fHwxNzYxODM3MDg5fDA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "'Build table, card, and list views with filters and sorting'",
+                "category": "Contexts",
+                "difficulty": "Intermediate",
+                "duration": "30",
+                "icon": "\"\\U0001F441️\"",
+                "image": "'https://images.unsplash.com/photo-1460925895917-afdab827c52f'",
+                "content": "|-",
+                "codeExamples": "|-",
+                "\"id\"": "\"tasks-view\",",
+                "\"type\"": "\"table\",",
+                "\"showFields\"": "[\"title\", \"status\"]",
+                "prerequisites": "Working knowledge of contexts",
+                "learningOutcomes": "'Create views, apply filters, configure sorting, use different view types'",
+                "tags": "",
+                "publishedDate": "'2025-10-04'",
+                "lastUpdated": "'2025-10-12'",
+                "views": "156"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.880Z",
+            "generator": "space-gen"
+          },
+          "name": "Creating Your First Space",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials/Creating Your First Space",
+          "definition": {
+            "defaultSticker": "📦"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1532254749169-ca0e30f76aa1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxjcmVhdGluZyUyMHlvdXIlMjBmaXJzdCUyMHNwYWNlfGVufDB8MHx8fDE3NjE4MzcwNzl8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Creating Your First Space",
+            "description": "Step-by-step guide to creating and configuring a new space from scratch",
+            "category": "Spaces",
+            "difficulty": "Beginner",
+            "duration": 15,
+            "icon": "📦",
+            "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b",
+            "content": "# Creating Your First Space\n\nIn this tutorial, you'll learn how to create a space...",
+            "codeExamples": "{\n  \"name\": \"My First Space\",\n  \"sticker\": \"📦\",\n  \"description\": \"A simple space example\"\n}",
+            "prerequisites": "Basic understanding of Make.md interface",
+            "learningOutcomes": "Create spaces, configure properties, understand space structure",
+            "tags": [
+              "beginner",
+              "spaces"
+            ],
+            "publishedDate": "2025-10-01",
+            "lastUpdated": "2025-10-15",
+            "views": 245
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Creating Your First Space.md",
+              "properties": {
+                "sticker": "\"\\U0001F4E6\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1532254749169-ca0e30f76aa1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxjcmVhdGluZyUyMHlvdXIlMjBmaXJzdCUyMHNwYWNlfGVufDB8MHx8fDE3NjE4MzcwNzl8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "Step-by-step guide to creating and configuring a new space from scratch",
+                "category": "Spaces",
+                "difficulty": "Beginner",
+                "duration": "15",
+                "icon": "\"\\U0001F4E6\"",
+                "image": "'https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b'",
+                "content": "|-",
+                "codeExamples": "\"{\\n  \\\"name\\\": \\\"My First Space\\\",\\n  \\\"sticker\\\": \\\"\\U0001F4E6\\\",\\n  \\\"description\\\": \\\"A simple space example\\\"\\n}\"",
+                "prerequisites": "Basic understanding of Make.md interface",
+                "learningOutcomes": "'Create spaces, configure properties, understand space structure'",
+                "tags": "",
+                "publishedDate": "'2025-10-01'",
+                "lastUpdated": "'2025-10-15'",
+                "views": "245"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.880Z",
+            "generator": "space-gen"
+          },
+          "name": "Interactive Components and Actions",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials/Interactive Components and Actions",
+          "definition": {
+            "defaultSticker": "⚡"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1758876202507-f789e0ab34e1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxpbnRlcmFjdGl2ZSUyMGNvbXBvbmVudHMlMjBhbmQlMjBhY3Rpb25zfGVufDB8MHx8fDE3NjE4MzcwOTJ8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Interactive Components and Actions",
+            "description": "Add interactivity with buttons, links, and action handlers",
+            "category": "Frames",
+            "difficulty": "Advanced",
+            "duration": 30,
+            "icon": "⚡",
+            "image": "https://images.unsplash.com/photo-1517694712202-14dd9538aa97",
+            "content": "# Interactive Components and Actions\n\nMake your spaces interactive with actions...",
+            "codeExamples": "{\n  \"type\": \"button\",\n  \"props\": {\n    \"onClick\": {\n      \"namespace\": \"table\",\n      \"method\": \"insert\"\n    }\n  }\n}",
+            "prerequisites": "Frame and component knowledge",
+            "learningOutcomes": "Add click handlers, implement navigation, use action API",
+            "tags": [
+              "advanced",
+              "frames",
+              "workflows"
+            ],
+            "publishedDate": "2025-10-09",
+            "lastUpdated": "2025-10-07",
+            "views": 128
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Interactive Components and Actions.md",
+              "properties": {
+                "sticker": "⚡",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1758876202507-f789e0ab34e1?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxpbnRlcmFjdGl2ZSUyMGNvbXBvbmVudHMlMjBhbmQlMjBhY3Rpb25zfGVufDB8MHx8fDE3NjE4MzcwOTJ8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "'Add interactivity with buttons, links, and action handlers'",
+                "category": "Frames",
+                "difficulty": "Advanced",
+                "duration": "30",
+                "icon": "⚡",
+                "image": "'https://images.unsplash.com/photo-1517694712202-14dd9538aa97'",
+                "content": "|-",
+                "codeExamples": "|-",
+                "\"type\"": "\"button\",",
+                "\"props\"": "{",
+                "\"onClick\"": "{",
+                "\"namespace\"": "\"table\",",
+                "\"method\"": "\"insert\"",
+                "prerequisites": "Frame and component knowledge",
+                "learningOutcomes": "'Add click handlers, implement navigation, use action API'",
+                "tags": "",
+                "publishedDate": "'2025-10-09'",
+                "lastUpdated": "'2025-10-07'",
+                "views": "128"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.881Z",
+            "generator": "space-gen"
+          },
+          "name": "Styling with Theme Tokens",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials/Styling with Theme Tokens",
+          "definition": {
+            "defaultSticker": "🎨"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1631639025318-d72c15d39642?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxzdHlsaW5nJTIwd2l0aCUyMHRoZW1lJTIwdG9rZW5zfGVufDB8MHx8fDE3NjE4MzcwOTF8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Styling with Theme Tokens",
+            "description": "Master theme tokens, semantic styles, and responsive design",
+            "category": "Frames",
+            "difficulty": "Intermediate",
+            "duration": 25,
+            "icon": "🎨",
+            "image": "https://images.unsplash.com/photo-1561070791-2526d30994b5",
+            "content": "# Styling with Theme Tokens\n\nTheme tokens ensure consistent styling...",
+            "codeExamples": "{\n  \"styles\": {\n    \"color\": \"var(--mk-ui-text-primary)\",\n    \"sem\": \"h2\"\n  }\n}",
+            "prerequisites": "Frame building experience",
+            "learningOutcomes": "Use theme tokens, apply semantic styles, create responsive layouts",
+            "tags": [
+              "intermediate",
+              "frames"
+            ],
+            "publishedDate": "2025-10-08",
+            "lastUpdated": "2025-10-08",
+            "views": 145
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Styling with Theme Tokens.md",
+              "properties": {
+                "sticker": "\"\\U0001F3A8\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1631639025318-d72c15d39642?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHxzdHlsaW5nJTIwd2l0aCUyMHRoZW1lJTIwdG9rZW5zfGVufDB8MHx8fDE3NjE4MzcwOTF8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "'Master theme tokens, semantic styles, and responsive design'",
+                "category": "Frames",
+                "difficulty": "Intermediate",
+                "duration": "25",
+                "icon": "\"\\U0001F3A8\"",
+                "image": "'https://images.unsplash.com/photo-1561070791-2526d30994b5'",
+                "content": "|-",
+                "codeExamples": "|-",
+                "\"styles\"": "{",
+                "\"color\"": "\"var(--mk-ui-text-primary)\",",
+                "\"sem\"": "\"h2\"",
+                "prerequisites": "Frame building experience",
+                "learningOutcomes": "'Use theme tokens, apply semantic styles, create responsive layouts'",
+                "tags": "",
+                "publishedDate": "'2025-10-08'",
+                "lastUpdated": "'2025-10-08'",
+                "views": "145"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.881Z",
+            "generator": "space-gen"
+          },
+          "name": "Using Frame Properties and Aggregates",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials/Using Frame Properties and Aggregates",
+          "definition": {
+            "defaultSticker": "🔢"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1665049180881-fb19c90c67cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHx1c2luZyUyMGZyYW1lJTIwcHJvcGVydGllcyUyMGFuZCUyMGFnZ3JlZ2F0ZXN8ZW58MHwwfHx8MTc2MTgzNzA4OXww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Using Frame Properties and Aggregates",
+            "description": "Implement calculated properties, aggregates, and formulas in frames",
+            "category": "Frames",
+            "difficulty": "Advanced",
+            "duration": 35,
+            "icon": "🔢",
+            "image": "https://images.unsplash.com/photo-1551288049-bebda4e38f71",
+            "content": "# Using Frame Properties and Aggregates\n\nProperties enable dynamic calculated values...",
+            "codeExamples": "{\n  \"totalTasks\": {\n    \"type\": \"aggregate\",\n    \"config\": {\n      \"aggregate\": { \"schema\": \"tasks\", \"fn\": \"count\" }\n    }\n  }\n}",
+            "prerequisites": "Understanding of frames and contexts",
+            "learningOutcomes": "Define frame properties, use aggregates, create formulas, reference values",
+            "tags": [
+              "advanced",
+              "properties",
+              "frames"
+            ],
+            "publishedDate": "2025-10-05",
+            "lastUpdated": "2025-10-11",
+            "views": 134
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Using Frame Properties and Aggregates.md",
+              "properties": {
+                "sticker": "\"\\U0001F522\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1665049180881-fb19c90c67cd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHx1c2luZyUyMGZyYW1lJTIwcHJvcGVydGllcyUyMGFuZCUyMGFnZ3JlZ2F0ZXN8ZW58MHwwfHx8MTc2MTgzNzA4OXww&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "'Implement calculated properties, aggregates, and formulas in frames'",
+                "category": "Frames",
+                "difficulty": "Advanced",
+                "duration": "35",
+                "icon": "\"\\U0001F522\"",
+                "image": "'https://images.unsplash.com/photo-1551288049-bebda4e38f71'",
+                "content": "|-",
+                "codeExamples": "|-",
+                "\"totalTasks\"": "{",
+                "\"type\"": "\"aggregate\",",
+                "\"config\"": "{",
+                "\"aggregate\"": "{ \"schema\": \"tasks\", \"fn\": \"count\" }",
+                "prerequisites": "Understanding of frames and contexts",
+                "learningOutcomes": "'Define frame properties, use aggregates, create formulas, reference values'",
+                "tags": "",
+                "publishedDate": "'2025-10-05'",
+                "lastUpdated": "'2025-10-11'",
+                "views": "134"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        },
+        {
+          "meta": {
+            "version": "1.0.0",
+            "generated": "2025-10-30T15:11:33.882Z",
+            "generator": "space-gen"
+          },
+          "name": "Working with Context Data",
+          "path": "job_1761836438935_608d4a6b120a3ca8/Tutorials/Working with Context Data",
+          "definition": {
+            "defaultSticker": "💾"
+          },
+          "properties": {
+            "cover": "https://images.unsplash.com/photo-1648134859177-525771773915?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHx3b3JraW5nJTIwd2l0aCUyMGNvbnRleHQlMjBkYXRhfGVufDB8MHx8fDE3NjE4MzcwODl8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+            "alias": "Working with Context Data",
+            "description": "Master context creation, column definitions, and data management",
+            "category": "Contexts",
+            "difficulty": "Intermediate",
+            "duration": 25,
+            "icon": "💾",
+            "image": "https://images.unsplash.com/photo-1558494949-ef010cbdcc31",
+            "content": "# Working with Context Data\n\nContexts store and manage your application data...",
+            "codeExamples": "{\n  \"name\": \"Tasks\",\n  \"columns\": [\n    { \"name\": \"title\", \"type\": \"text\", \"primary\": true }\n  ]\n}",
+            "prerequisites": "Understanding of frames and spaces",
+            "learningOutcomes": "Define contexts, create columns, manage data rows",
+            "tags": [
+              "intermediate",
+              "contexts",
+              "data"
+            ],
+            "publishedDate": "2025-10-03",
+            "lastUpdated": "2025-10-13",
+            "views": 178
+          },
+          "context": {},
+          "frames": {},
+          "children": [],
+          "notes": [
+            {
+              "name": "Working with Context Data.md",
+              "properties": {
+                "sticker": "\"\\U0001F4BE\"",
+                "banner": ">-",
+                "https": "//images.unsplash.com/photo-1648134859177-525771773915?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3MTIwNzV8MHwxfHNlYXJjaHwxfHx3b3JraW5nJTIwd2l0aCUyMGNvbnRleHQlMjBkYXRhfGVufDB8MHx8fDE3NjE4MzcwODl8MA&ixlib=rb-4.1.0&q=85&w=1920&q=80",
+                "description": "'Master context creation, column definitions, and data management'",
+                "category": "Contexts",
+                "difficulty": "Intermediate",
+                "duration": "25",
+                "icon": "\"\\U0001F4BE\"",
+                "image": "'https://images.unsplash.com/photo-1558494949-ef010cbdcc31'",
+                "content": "|-",
+                "codeExamples": "|-",
+                "\"name\"": "\"Tasks\",",
+                "\"columns\"": "[",
+                "{ \"name\"": "\"title\", \"type\": \"text\", \"primary\": true }",
+                "prerequisites": "Understanding of frames and spaces",
+                "learningOutcomes": "'Define contexts, create columns, manage data rows'",
+                "tags": "",
+                "publishedDate": "'2025-10-03'",
+                "lastUpdated": "'2025-10-13'",
+                "views": "178"
+              },
+              "content": ""
+            }
+          ],
+          "assets": [],
+          "templates": [],
+          "content": ""
+        }
+      ],
+      "notes": [],
+      "assets": [],
+      "templates": [],
+      "content": ""
+    }
+  ],
+  "notes": [],
+  "assets": [],
+  "templates": [],
+  "content": ""
+}
