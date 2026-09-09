@@ -273,18 +273,6 @@ plugins:
       darkMode: auto
       exportPadding: 20
     order: 50
-  - source: https://github.com/ethanweddCEO/supply-chain-quartz
-    enabled: true
-    options: {}
-    order: 50
-  - source:
-      name: quartz-themes
-      repo: github:saberzero1/quartz-themes
-      subdir: plugin
-      ref: main
-    enabled: true
-    order: 50
-    options: {}
   - source: github:quartz-community/explorer
     enabled: true
     options:
