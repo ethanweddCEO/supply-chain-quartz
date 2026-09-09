@@ -283,14 +283,15 @@ plugins:
     layout:
       position: left
       priority: 50
-   - source: github:satche/quartz-navbar
+  
+  - source: github:satche/quartz-navbar
     enabled: true
     options:
       links:
         - label: Home
           href: /
         - label: Supply Chain
-          href: /Merit America Supply Chain
+          href: "/Merit America Supply Chain"
     order: 50
     layout:
       position: header
