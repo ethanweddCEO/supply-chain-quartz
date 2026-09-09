@@ -290,7 +290,7 @@ plugins:
         - label: Home
           href: /
         - label: Supply Chain
-          href: /supply-chain
+          href: /Merit America Supply Chain
     order: 50
     layout:
       position: header
