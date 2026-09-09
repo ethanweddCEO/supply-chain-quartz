@@ -295,6 +295,109 @@ plugins:
     layout:
       position: left
       priority: 50
+  - source: github:satche/quartz-navbar
+    enabled: true
+    options: {}
+    order: 50
+    layout:
+      position: right
+      priority: 50
+  - source: github:quartz-community/explorer
+    enabled: true
+    options:
+      folderDefaultState: collapsed
+      folderClickBehavior: link
+      useSavedState: true
+    order: 50
+    layout:
+      position: left
+      priority: 50
+  - source: github:quartz-community/content-index
+    enabled: true
+    options:
+      enableSiteMap: true
+      enableRSS: true
+      rssLimit: 10
+      rssFullHtml: false
+      rssSlug: index
+      includeEmptyFiles: true
+    order: 50
+  - source: github:quartz-community/spacer
+    enabled: true
+    options: {}
+    order: 15
+    layout:
+      position: left
+      priority: 15
+  - source: github:quartz-community/og-image
+    enabled: true
+    options:
+      colorScheme: lightMode
+      width: 1200
+      height: 630
+      excludeRoot: false
+      defaultTitle: Untitled
+      defaultDescription: No description provided
+    order: 50
+  - source: github:quartz-community/footer
+    enabled: true
+    options:
+      links:
+        GitHub: https://github.com/jackyzha0/quartz
+        Discord Community: https://discord.gg/cRFFHYye7t
+    order: 50
+  - source: github:quartz-community/bases-page
+    enabled: true
+    options:
+      defaultViewType: table
+      linkResolution: shortest
+    order: 50
+  - source: github:quartz-community/search
+    enabled: true
+    options:
+      enablePreview: true
+      fieldPriority:
+        - title
+        - content
+        - tags
+    order: 50
+    layout:
+      position: left
+      priority: 20
+  - source: github:quartz-community/hard-line-breaks
+    enabled: false
+    options: {}
+    order: 90
+  - source: github:quartz-community/fonts
+    enabled: true
+    options:
+      useThemeFonts: true
+      fontOrigin: googleFonts
+    order: 60
+  - source: github:quartz-community/folder-page
+    enabled: true
+    options:
+      showFolderCount: true
+      showSubfolders: true
+    order: 50
+  - source: github:quartz-community/crawl-links
+    enabled: true
+    options:
+      markdownLinkResolution: absolute
+      prettyLinks: true
+      openLinksInNewTab: false
+      lazyLoad: false
+      externalLinkIcon: true
+      disableBrokenWikilinks: false
+    order: 60
+  - source: github:quartz-community/backlinks
+    enabled: true
+    options:
+      hideWhenEmpty: true
+    order: 50
+    layout:
+      position: right
+      priority: 30
 layout:
   groups:
     toolbar:
