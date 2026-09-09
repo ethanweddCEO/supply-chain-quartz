@@ -1,5 +1,11 @@
+---
+publish: true
+created: 2026-08-20T17:18:08.361-07:00
+modified: 2026-09-03T17:28:15.611-07:00
+---
 
 > [!NOTE] 7 step PO cycle
+>
 > 1. req
 > 2. sourcing
 > 3. pricing
@@ -11,16 +17,16 @@
 Centralized VS decentralized
 Aggregated PO voluems, economies of scale
 Increased buyer specialization
-reduced duplicatigon of effort
+reduced duplication of effort
 improved po coordination and control
-efficent utilization of MRP 
+efficent utilization of MRP
 
-Decentralized 
-Greater facility autonomy 
-Faster replenishment and customer responsivess 
-effective use of local resources and suppliuers 
-direct link between facility needs and purchasing 
-increased local ownerfship and accountability 
+Decentralized
+Greater facility autonomy
+Faster replenishment and customer responsivess
+effective use of local resources and suppliuers
+direct link between facility needs and purchasing
+increased local ownerfship and accountability
 
 > [!NOTE]              sdasd
 > Contents
