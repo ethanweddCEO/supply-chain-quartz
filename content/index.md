@@ -10,12 +10,12 @@ aliases:
 
 # Supply Chain Dictionary
 
-> [!tip] FIELD GUIDE / SEARCH-FIRST REFERENCE
-> Find the term, system, or decision you need. This dictionary turns working Obsidian notes into a practical supply-chain learning reference.
+> [!tip] THE OPERATING LANGUAGE OF SUPPLY
+> Find the term, system, or decision you need. This dictionary turns working Obsidian notes into a practical supply-chain field guide.
 
-Welcome to the **Supply Chain Dictionary** — a practical field guide for the concepts, systems, and decisions that keep supply networks moving. Use it when you need a clear definition, a useful connection, or a better next question.
+Welcome to the **Supply Chain Dictionary**: a curated reference for the language behind purchasing, procurement, planning, inventory, and supplier decisions. Each entry is designed to answer three questions quickly: **what does it mean, where does it fit, and what should I ask next?**
 
-## Start with the right move
+## Find your next move
 
 - **Need a definition?** Start with the [[Glossary|glossary]] and follow the links beneath each term.
 - **Trying to understand a function?** Choose a [[Purchasing|topic guide]] below and move from concept to practice.
@@ -30,21 +30,25 @@ Welcome to the **Supply Chain Dictionary** — a practical field guide for the c
 - [[Supplier Management|Supplier management]]
 - [[Strategic Sourcing|Strategic sourcing]]
 
-## A dependable path through the network
+## How to use the dictionary
 
-**01 — Locate.** Use Search to find a term, system, or decision.
+**01 — Locate.** Search for the term, system, or decision that is in front of you.
 
-**02 — Connect.** Use the Dictionary explorer, tags, backlinks, and topic guides to see where it fits.
+**02 — Connect.** Use the explorer, tags, backlinks, and topic guides to see where it fits in the network.
 
 **03 — Apply.** Open the examples, then save difficult terms in [[Flashcards]] for deliberate practice.
 
-Notes remain editable in Obsidian and publish here without changing the source workflow.
+The source remains in Obsidian. The published dictionary is the working layer: searchable, linked, and structured for quick decisions.
 
 ## Signals worth knowing
 
 - [[Safety stock]] protects service levels when demand or supply is uncertain.
 - [[Lead time]] connects a decision today with the date supply becomes available.
 - [[Total cost of ownership]] keeps sourcing decisions from focusing only on unit price.
+
+## Built for the handoff
+
+Supply chain work is connected work. A definition is more useful when it points to the next decision, the next metric, or the next conversation with a supplier. Use the links, examples, and personal quiz deck to move from vocabulary to confident action.
 
 ---
 

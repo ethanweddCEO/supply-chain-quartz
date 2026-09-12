@@ -23,12 +23,15 @@ export const DefaultFrame: PageFrame = {
   }: PageFrameProps) {
     return (
       <>
+        <a class="skip-link" href="#page-content">
+          Skip to content
+        </a>
         <div class="left sidebar">
           {left.map((BodyComponent) => (
             <BodyComponent {...componentData} />
           ))}
         </div>
-        <div class="center">
+        <div class="center" id="page-content" tabindex={-1}>
           <div class="page-header">
             <Header {...componentData}>
               {header.map((HeaderComponent) => (
