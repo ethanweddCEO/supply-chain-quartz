@@ -1,4 +1,12 @@
 ---
+title: Purchase Order Cycle
+description: Class notes on the seven-step purchase order cycle and centralized versus decentralized purchasing.
+tags:
+  - purchasing
+  - procurement
+  - class-notes
+aliases:
+  - PO cycle class
 publish: true
 created: 2026-08-27T18:16:22.114-07:00
 modified: 2026-09-01T23:43:56.782-07:00
@@ -24,7 +32,7 @@ Make sure everyone knows what theyre doing and make sure that get communicated t
 > 1.Internal interfaces
 > ERP systemns - po history, suipplier databases, performance measurement
 > 2\. Externalk supplier interfaces
-> 1\. Internet / EDI links - real time POs, logistics, payment, collaborative,  design portals
+> 1\. Internet / EDI links - real time POs, logistics, payment, collaborative, design portals
 > 3\. SRM analyitcs
 > 1\. Spend alaysis, RFQ analysis, scorecard & rejection log data - both in one place
 > 4\. SRM Services

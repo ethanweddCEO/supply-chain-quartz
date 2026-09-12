@@ -1,4 +1,12 @@
 ---
+title: Supply Chain Foundations
+description: Foundational class notes on supply chain functions, purchasing, procurement, and operations.
+tags:
+  - supply-chain
+  - foundations
+  - class-notes
+aliases:
+  - First supply chain class
 publish: true
 created: 2026-08-18T17:08:42.964-07:00
 modified: 2026-09-01T23:43:51.910-07:00
@@ -13,12 +21,12 @@ modified: 2026-09-01T23:43:51.910-07:00
 > There will be assignments for EACH class session
 > Gamma App is where the presentations are located
 >
-> Purchasing  is TACTICAL = HANDLIGING the purchase, placing the PO, tracking it, taking the lead time into account
+> Purchasing is TACTICAL = HANDLIGING the purchase, placing the PO, tracking it, taking the lead time into account
 >
 > Procurment is STRATEGIC = Sourcing, who do we buy it from, why? Get it from China for cheaper? Or mexico for more cost but way faster shipment or lower MOQs
 
 > [!NOTE] Dictionary
-> Direct materials  : Part that is directly part of a BOM (I.e. ram for an iphone or raw glass for the case)
+> Direct materials : Part that is directly part of a BOM (I.e. ram for an iphone or raw glass for the case)
 > Finished Goods Inventory : An iPhone finished and sitting on the shelf to get shipped out / sold
 > MRO Supplies : Parts important to the business that do not explicitly go into the product / BOM
 > Capital Assets : Infrastructure, machines, etc. Long life things that are used, high price

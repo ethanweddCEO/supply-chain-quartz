@@ -1,4 +1,12 @@
 ---
+title: Supplier Relationship Management
+description: Class notes on SRM, supplier interfaces, analytics, services, and cross-functional collaboration.
+tags:
+  - suppliers
+  - srm
+  - class-notes
+aliases:
+  - SRM class
 publish: true
 created: 2026-09-01T16:58:10.787-07:00
 modified: 2026-09-03T17:41:36.006-07:00

@@ -1,4 +1,13 @@
 ---
+title: ERP, MRP, and Planning Systems
+description: Class notes on enterprise systems, material requirements planning, projected balance, and MRP action messages.
+tags:
+  - planning
+  - erp
+  - mrp
+  - class-notes
+aliases:
+  - Planning systems class
 publish: true
 created: 2026-08-25T17:10:40.948-07:00
 modified: 2026-09-01T23:43:45.557-07:00
@@ -19,7 +28,7 @@ modified: 2026-09-01T23:43:45.557-07:00
 What is strategic sourcing & what is invovled?
 
 ```
-Where could i save some money? 
+Where could i save some money?
 ```
 
 Warm up Q

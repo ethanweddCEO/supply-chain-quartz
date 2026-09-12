@@ -473,7 +473,14 @@ export async function installPlugin(
       console.log(styleText("cyan", `→`), `Linking ${spec.name} from ${spec.repo}...`)
     }
 
-    fs.symlinkSync(spec.repo, pluginDir, "dir")
+    try {
+      fs.symlinkSync(spec.repo, pluginDir, "dir")
+    } catch (err: unknown) {
+      // Windows may deny directory symlinks without Developer Mode or elevation.
+      // Copying a local plugin keeps standard builds deterministic in that environment.
+      if ((err as NodeJS.ErrnoException).code !== "EPERM") throw err
+      fs.cpSync(spec.repo, pluginDir, { recursive: true })
+    }
 
     if (options.verbose) {
       console.log(styleText("green", `✓`), `Linked ${spec.name}`)

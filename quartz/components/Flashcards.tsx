@@ -46,9 +46,18 @@ const Flashcards: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
         <div class="flashcard-panel">
           <div class="flashcards-panel-heading">
             <h3>Your deck</h3>
-            <button id="flashcards-clear" type="button" class="flashcards-text-button">
-              Clear personal cards
-            </button>
+            <div class="flashcards-panel-actions">
+              <button id="flashcards-export" type="button" class="flashcards-text-button">
+                Export
+              </button>
+              <label class="flashcards-import-button">
+                Import
+                <input id="flashcards-import" type="file" accept="application/json" hidden />
+              </label>
+              <button id="flashcards-clear" type="button" class="flashcards-text-button">
+                Clear
+              </button>
+            </div>
           </div>
           <div id="flashcards-list" class="flashcards-list" aria-live="polite" />
         </div>
@@ -71,6 +80,12 @@ const Flashcards: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
                 Standard · 10 cards · 2 minutes
               </option>
               <option value="deep">Deep · 15 cards · 5 minutes</option>
+            </select>
+          </label>
+          <label>
+            Topic
+            <select id="flashcards-topic">
+              <option value="all">All topics</option>
             </select>
           </label>
           <button id="flashcards-start" type="button" class="flashcards-primary">
@@ -147,6 +162,11 @@ Flashcards.afterDOMLoaded = `
   }
   const save = () => localStorage.setItem(storageKey, JSON.stringify({ cards, history }))
   const allCards = () => [...seedCards, ...cards]
+  const topics = () => [...new Set(allCards().flatMap((card) => card.tags || []))].sort()
+  const renderTopics = () => {
+    const select = byId("flashcards-topic")
+    select.innerHTML = '<option value="all">All topics</option>' + topics().map((topic) => '<option value="' + escapeHtml(topic) + '">' + escapeHtml(topic) + '</option>').join("")
+  }
   const render = () => {
     const personal = cards
     byId("flashcards-count").textContent = String(personal.length)
@@ -156,6 +176,7 @@ Flashcards.afterDOMLoaded = `
     const attempts = history.length
     const average = attempts ? Math.round(history.reduce((sum, item) => sum + item.percent, 0) / attempts) : 0
     byId("flashcards-history-summary").textContent = attempts ? attempts + " quizzes · " + average + "% average" : "No quiz history yet"
+    renderTopics()
   }
   const finishQuiz = () => {
     if (!quiz) return
@@ -216,9 +237,34 @@ Flashcards.afterDOMLoaded = `
     save()
     render()
   })
+  byId("flashcards-export").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify({ cards }, null, 2)], { type: "application/json" })
+    const link = document.createElement("a")
+    link.href = URL.createObjectURL(blob)
+    link.download = "supply-chain-dictionary-cards.json"
+    link.click()
+    URL.revokeObjectURL(link.href)
+  })
+  byId("flashcards-import").addEventListener("change", async (event) => {
+    const file = event.target.files?.[0]
+    if (!file) return
+    try {
+      const imported = JSON.parse(await file.text())
+      const incoming = Array.isArray(imported) ? imported : imported.cards
+      if (!Array.isArray(incoming)) throw new Error("Cards must be an array")
+      cards = incoming.filter((card) => typeof card?.term === "string" && typeof card?.definition === "string").slice(0, 200)
+      save()
+      render()
+      byId("flashcard-form-status").textContent = "Cards imported on this device."
+    } catch {
+      byId("flashcard-form-status").textContent = "Import failed. Choose a valid card export."
+    }
+    event.target.value = ""
+  })
   byId("flashcards-start").addEventListener("click", () => {
     const mode = difficulty[byId("flashcards-difficulty").value]
-    const pool = allCards().sort(() => Math.random() - 0.5)
+    const topic = byId("flashcards-topic").value
+    const pool = allCards().filter((card) => topic === "all" || (card.tags || []).includes(topic)).sort(() => Math.random() - 0.5)
     quiz = { questions: pool.slice(0, Math.min(mode.count, pool.length)), index: 0, correct: 0, total: Math.min(mode.count, pool.length), remaining: mode.seconds }
     byId("flashcards-results").hidden = true
     byId("flashcards-setup").hidden = true
@@ -253,6 +299,7 @@ Flashcards.afterDOMLoaded = `
 Flashcards.css = `
 .flashcards-app { margin-top: 3rem; border-top: 1px solid var(--lightgray); padding-top: 2rem; }
 .flashcards-header, .flashcards-panel-heading, .flashcards-quiz-meta, .flashcards-quiz-actions { display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+.flashcards-panel-actions { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; }
 .flashcards-header { margin-bottom: 1.5rem; }
 .flashcards-kicker { color: var(--secondary); font-size: .75rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; margin: 0 0 .35rem; }
 .flashcards-header h2, .flashcards-panel h3 { margin-top: 0; }
@@ -269,6 +316,7 @@ Flashcards.css = `
 .flashcards-primary:hover { background: var(--tertiary); }
 .flashcards-text-button { border: 0; background: transparent; color: var(--secondary); cursor: pointer; font: inherit; padding: .25rem; }
 .flashcards-text-button:hover { color: var(--tertiary); }
+.flashcards-import-button { color: var(--secondary); cursor: pointer; font-size: .9rem; font-weight: 600; }
 .flashcards-status, .flashcards-feedback { min-height: 1.4rem; color: var(--tertiary); font-size: .9rem; }
 .flashcards-list { display: grid; gap: .65rem; max-height: 23rem; overflow: auto; }
 .flashcard-item { display: flex; align-items: start; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--lightgray); padding-bottom: .65rem; }
@@ -282,7 +330,7 @@ Flashcards.css = `
 .flashcards-quiz-meta strong { color: var(--secondary); }
 .flashcards-quiz h4 { font-size: 1.4rem; margin-bottom: 1rem; }
 .flashcards-score { color: var(--secondary); font-size: 3rem; font-weight: 700; margin: .5rem 0; }
-@media all and (max-width: 800px) { .flashcards-header, .flashcards-setup { align-items: stretch; flex-direction: column; } .flashcards-grid { grid-template-columns: 1fr; } .flashcards-stat { text-align: left; } }
+@media all and (max-width: 800px) { .flashcards-header, .flashcards-setup { align-items: stretch; flex-direction: column; } .flashcards-grid { grid-template-columns: 1fr; } .flashcards-stat { text-align: left; } .flashcards-panel-heading { align-items: flex-start; flex-direction: column; } .flashcards-panel-actions { width: 100%; } }
 `
 
 export default (() => Flashcards) satisfies QuartzComponentConstructor
