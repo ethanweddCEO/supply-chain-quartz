@@ -103,14 +103,33 @@ const Flashcards: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
             <textarea id="flashcards-answer" autocomplete="off" />
           </label>
           <div class="flashcards-quiz-actions">
-            <button id="flashcards-submit" type="button" class="flashcards-primary">
-              Check answer
+            <button id="flashcards-reveal" type="button" class="flashcards-primary">
+              Reveal answer
             </button>
             <button id="flashcards-skip" type="button" class="flashcards-text-button">
               Skip
             </button>
           </div>
-          <p id="flashcards-feedback" class="flashcards-feedback" role="status" />
+          <div id="flashcards-feedback" class="flashcards-feedback" role="status" hidden />
+          <div id="flashcards-rating" class="flashcards-rating" hidden>
+            <p>
+              <strong>How did you do?</strong> Grade your own recall.
+            </p>
+            <div class="flashcards-rating-actions">
+              <button type="button" data-rating="incorrect" class="flashcards-rating-button">
+                Incorrect <small>0</small>
+              </button>
+              <button type="button" data-rating="partial" class="flashcards-rating-button">
+                Partial <small>0.5</small>
+              </button>
+              <button type="button" data-rating="correct" class="flashcards-rating-button">
+                Correct <small>1</small>
+              </button>
+              <button type="button" data-rating="easy" class="flashcards-rating-button">
+                Easy <small>1</small>
+              </button>
+            </div>
+          </div>
         </div>
         <div id="flashcards-results" class="flashcards-results" hidden />
       </div>
@@ -219,23 +238,32 @@ Flashcards.afterDOMLoaded = `
       : '<p class="flashcards-muted">Your personal cards will appear here. The built-in dictionary deck is always available in quizzes.</p>'
     const attempts = history.length
     const average = attempts ? Math.round(history.reduce((sum, item) => sum + item.percent, 0) / attempts) : 0
-    byId("flashcards-history-summary").textContent = attempts ? attempts + " quizzes · " + average + "% average" : "No quiz history yet"
+    const latest = attempts ? history[0].percent : 0
+    const first = attempts ? history[history.length - 1].percent : 0
+    const change = attempts > 1 ? latest - first : 0
+    const best = attempts ? Math.max(...history.map((item) => item.percent)) : 0
+    byId("flashcards-history-summary").textContent = attempts
+      ? attempts + " quizzes · " + latest + "% latest · " + average + "% average · " + best + "% best · " + (change >= 0 ? "+" : "") + change + " pts"
+      : "No quiz history yet"
     renderTopics()
   }
   const finishQuiz = () => {
     if (!quiz) return
     clearInterval(timer)
-    const percent = Math.round((quiz.correct / quiz.total) * 100)
+    quiz.incorrect += Math.max(0, quiz.total - quiz.index - quiz.correct - quiz.partial - quiz.incorrect)
+    const percent = Math.round((quiz.points / quiz.total) * 100)
     quiz.questions.forEach((question) => {
       const personal = cards.find((card) => card.term === question.term)
-      if (personal) personal.queued = false
+      if (personal && personal.lastRating !== "incorrect" && personal.lastRating !== "partial") {
+        personal.queued = false
+      }
     })
-    history.unshift({ date: new Date().toISOString(), correct: quiz.correct, total: quiz.total, percent })
+    history.unshift({ date: new Date().toISOString(), correct: quiz.correct, partial: quiz.partial, incorrect: quiz.incorrect, easy: quiz.easy, total: quiz.total, percent, topic: quiz.topic, seconds: quiz.startedSeconds - quiz.remaining })
     history = history.slice(0, 20)
     save()
     byId("flashcards-quiz").hidden = true
     byId("flashcards-results").hidden = false
-    byId("flashcards-results").innerHTML = '<h4>Quiz complete</h4><p class="flashcards-score">' + percent + '%</p><p>' + quiz.correct + ' of ' + quiz.total + ' answers matched the key terms.</p><button type="button" class="flashcards-primary" id="flashcards-again">Run another quiz</button>'
+    byId("flashcards-results").innerHTML = '<h4>Quiz complete</h4><p class="flashcards-score">' + percent + '%</p><p>' + quiz.correct + ' correct · ' + quiz.partial + ' partial · ' + quiz.incorrect + ' incorrect · ' + quiz.easy + ' easy</p><p class="flashcards-muted">Your self-grade is saved only in this browser.</p><button type="button" class="flashcards-primary" id="flashcards-again">Run another quiz</button>'
     byId("flashcards-setup").hidden = false
     quiz = null
     render()
@@ -247,18 +275,41 @@ Flashcards.afterDOMLoaded = `
     byId("flashcards-timer").textContent = quiz.remaining + "s"
     byId("flashcards-question").textContent = "Define: " + card.term
     byId("flashcards-answer").value = ""
-    byId("flashcards-feedback").textContent = ""
+    byId("flashcards-feedback").hidden = true
+    byId("flashcards-rating").hidden = true
+    byId("flashcards-reveal").hidden = false
+    byId("flashcards-skip").hidden = false
     byId("flashcards-answer").focus()
   }
-  const answer = (isSkip) => {
+  const reveal = () => {
     if (!quiz) return
     const card = quiz.questions[quiz.index]
     const response = byId("flashcards-answer").value.trim().toLowerCase()
-    const correct = !isSkip && response.length > 0 && (card.definition.toLowerCase().includes(response) || response.split(" ").filter(Boolean).filter((word) => card.definition.toLowerCase().includes(word)).length >= 3)
-    if (correct) quiz.correct += 1
-    byId("flashcards-feedback").innerHTML = (correct ? "<strong>Correct.</strong> " : "<strong>Review this one.</strong> ") + escapeHtml(card.definition)
+    const words = response.split(/\s+/).filter((word) => word.length > 2)
+    const matches = words.filter((word) => card.definition.toLowerCase().includes(word)).length
+    const guidance = response && (card.definition.toLowerCase().includes(response) || matches >= 3)
+      ? "Our text check found a possible match. Decide whether your explanation was actually complete."
+      : "The wording did not closely match the reference. You decide whether you understood the concept."
+    byId("flashcards-feedback").innerHTML = "<strong>Reference definition:</strong> " + escapeHtml(card.definition) + "<br><span>" + guidance + "</span>"
+    byId("flashcards-feedback").hidden = false
+    byId("flashcards-rating").hidden = false
+    byId("flashcards-reveal").hidden = true
+    byId("flashcards-skip").hidden = true
+  }
+  const grade = (rating) => {
+    if (!quiz) return
+    if (rating === "correct" || rating === "easy") quiz.correct += 1
+    if (rating === "partial") quiz.partial += 1
+    if (rating === "incorrect") quiz.incorrect += 1
+    if (rating === "easy") quiz.easy += 1
+    quiz.points += rating === "partial" ? 0.5 : rating === "incorrect" ? 0 : 1
+    const personal = cards.find((card) => card.term === quiz.questions[quiz.index].term)
+    if (personal) {
+      personal.lastRating = rating
+      personal.queued = rating === "incorrect" || rating === "partial"
+    }
     quiz.index += 1
-    window.setTimeout(showQuestion, 900)
+    window.setTimeout(showQuestion, 450)
   }
   byId("flashcard-form").addEventListener("submit", (event) => {
     event.preventDefault()
@@ -313,10 +364,9 @@ Flashcards.afterDOMLoaded = `
     const mode = difficulty[byId("flashcards-difficulty").value]
     const topic = byId("flashcards-topic").value
     const pool = allCards().filter((card) => topic === "all" || (card.tags || []).includes(topic))
-    const queued = pool.filter((card) => card.queued)
-    const remaining = pool.filter((card) => !card.queued).sort(() => Math.random() - 0.5)
-    const questions = queued.concat(remaining).slice(0, Math.min(mode.count, pool.length))
-    quiz = { questions, index: 0, correct: 0, total: questions.length, remaining: mode.seconds }
+    const priority = (card) => card.queued ? 0 : card.lastRating === "incorrect" ? 1 : card.lastRating === "partial" ? 2 : 3
+    const questions = pool.sort((a, b) => priority(a) - priority(b) || Math.random() - 0.5).slice(0, Math.min(mode.count, pool.length))
+    quiz = { questions, index: 0, correct: 0, partial: 0, incorrect: 0, easy: 0, points: 0, total: questions.length, remaining: mode.seconds, startedSeconds: mode.seconds, topic }
     byId("flashcards-results").hidden = true
     byId("flashcards-setup").hidden = true
     byId("flashcards-quiz").hidden = false
@@ -328,10 +378,21 @@ Flashcards.afterDOMLoaded = `
     }, 1000)
     showQuestion()
   })
-  byId("flashcards-submit").addEventListener("click", () => answer(false))
-  byId("flashcards-skip").addEventListener("click", () => answer(true))
+  byId("flashcards-reveal").addEventListener("click", reveal)
+  byId("flashcards-skip").addEventListener("click", () => {
+    if (!quiz) return
+    const personal = cards.find((card) => card.term === quiz.questions[quiz.index].term)
+    if (personal) {
+      personal.lastRating = "incorrect"
+      personal.queued = true
+    }
+    quiz.incorrect += 1
+    quiz.index += 1
+    showQuestion()
+  })
+  root.querySelectorAll("[data-rating]").forEach((button) => button.addEventListener("click", () => grade(button.dataset.rating)))
   byId("flashcards-answer").addEventListener("keydown", (event) => {
-    if ((event.ctrlKey || event.metaKey) && event.key === "Enter") answer(false)
+    if ((event.ctrlKey || event.metaKey) && event.key === "Enter") reveal()
   })
   root.addEventListener("click", (event) => {
     if (event.target.id === "flashcards-again") {
@@ -369,6 +430,13 @@ Flashcards.css = `
 .flashcards-text-button:hover { color: var(--tertiary); }
 .flashcards-import-button { color: var(--secondary); cursor: pointer; font-size: .9rem; font-weight: 600; }
 .flashcards-status, .flashcards-feedback { min-height: 1.4rem; color: var(--tertiary); font-size: .9rem; }
+.flashcards-feedback { border-left: 3px solid var(--tertiary); background: color-mix(in srgb, var(--tertiary) 7%, var(--light)); padding: .75rem 1rem; }
+.flashcards-rating { margin-top: 1rem; }
+.flashcards-rating p { margin: 0 0 .6rem; }
+.flashcards-rating-actions { display: flex; flex-wrap: wrap; gap: .55rem; }
+.flashcards-rating-button { border: 1px solid var(--lightgray); border-radius: .45rem; background: var(--light); color: var(--dark); cursor: pointer; font: inherit; font-weight: 700; padding: .55rem .75rem; }
+.flashcards-rating-button:hover, .flashcards-rating-button:focus-visible { border-color: var(--tertiary); background: color-mix(in srgb, var(--tertiary) 10%, var(--light)); }
+.flashcards-rating-button small { display: block; color: var(--gray); font-size: .72rem; font-weight: 400; }
 .flashcards-list { display: grid; gap: .65rem; max-height: 23rem; overflow: auto; }
 .flashcard-item { display: flex; align-items: start; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--lightgray); padding-bottom: .65rem; }
 .flashcard-item p { margin: .2rem 0; font-size: .9rem; }
