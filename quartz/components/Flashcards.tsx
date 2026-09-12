@@ -120,10 +120,55 @@ const Flashcards: QuartzComponent = ({ fileData }: QuartzComponentProps) => {
 
 Flashcards.afterDOMLoaded = `
 (() => {
+  const storageKey = "supply-chain-dictionary.flashcards.v1"
+  const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[char]))
+  const readStore = () => {
+    try {
+      const saved = JSON.parse(localStorage.getItem(storageKey) || "{}")
+      return { cards: Array.isArray(saved.cards) ? saved.cards : [], history: Array.isArray(saved.history) ? saved.history : [] }
+    } catch {
+      return { cards: [], history: [] }
+    }
+  }
+  const addDictionaryButtons = () => {
+    const article = document.querySelector("article")
+    const pageTitle = document.querySelector(".page-header h1")?.textContent?.trim() || "Dictionary"
+    if (!article || pageTitle.toLowerCase() === "flashcards") return
+
+    article.querySelectorAll("h3").forEach((heading) => {
+      if (heading.dataset.flashcardReady === "true") return
+      const definition = heading.nextElementSibling
+      if (!definition || definition.tagName !== "P") return
+      const term = heading.textContent?.trim()
+      if (!term || term.length > 80) return
+      heading.dataset.flashcardReady = "true"
+      const button = document.createElement("button")
+      button.type = "button"
+      button.className = "dictionary-quiz-button"
+      button.textContent = "Add to quiz"
+      button.setAttribute("aria-label", "Add " + term + " to your flashcard quiz")
+      button.addEventListener("click", () => {
+        const store = readStore()
+        const normalized = term.toLowerCase()
+        const existing = store.cards.some((card) => card.term.toLowerCase() === normalized)
+        if (!existing) {
+          const section = heading.closest("section")?.querySelector("h2")?.textContent?.trim()
+          store.cards.unshift({ term, definition: definition.textContent.trim(), tags: [section || pageTitle, "dictionary"], source: "dictionary", queued: true })
+          localStorage.setItem(storageKey, JSON.stringify(store))
+        }
+        button.textContent = existing ? "Already in quiz" : "Added to quiz"
+        button.classList.add("is-added")
+        heading.classList.add("dictionary-term-added")
+        window.setTimeout(() => button.classList.remove("is-added"), 700)
+      })
+      heading.append(" ", button)
+    })
+  }
+  addDictionaryButtons()
+
   const root = document.querySelector(".flashcards-app")
   if (!root) return
 
-  const storageKey = "supply-chain-dictionary.flashcards.v1"
   const seedCards = [
     { term: "Purchasing", definition: "Tactical, transaction-focused work such as placing purchase orders, tracking lead times, and handling routine buying.", tags: ["purchasing"] },
     { term: "Procurement", definition: "The strategic discipline of deciding what to buy, from whom, why, and under what commercial terms.", tags: ["procurement"] },
@@ -149,7 +194,6 @@ Flashcards.afterDOMLoaded = `
   let timer = null
 
   const byId = (id) => document.getElementById(id)
-  const escapeHtml = (value) => String(value).replace(/[&<>"']/g, (char) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#039;" }[char]))
   const load = () => {
     try {
       const saved = JSON.parse(localStorage.getItem(storageKey) || "{}")
@@ -171,7 +215,7 @@ Flashcards.afterDOMLoaded = `
     const personal = cards
     byId("flashcards-count").textContent = String(personal.length)
     byId("flashcards-list").innerHTML = personal.length
-      ? personal.map((card, index) => '<article class="flashcard-item"><div><strong>' + escapeHtml(card.term) + '</strong><p>' + escapeHtml(card.definition) + '</p><small>' + escapeHtml((card.tags || []).join(" · ")) + '</small></div><button type="button" data-remove-card="' + index + '" aria-label="Remove ' + escapeHtml(card.term) + '">Remove</button></article>').join("")
+      ? personal.map((card, index) => '<article class="flashcard-item"><div><strong>' + escapeHtml(card.term) + '</strong>' + (card.queued ? ' <span class="flashcard-queued">Next quiz</span>' : '') + '<p>' + escapeHtml(card.definition) + '</p><small>' + escapeHtml((card.tags || []).join(" · ")) + '</small></div><button type="button" data-remove-card="' + index + '" aria-label="Remove ' + escapeHtml(card.term) + '">Remove</button></article>').join("")
       : '<p class="flashcards-muted">Your personal cards will appear here. The built-in dictionary deck is always available in quizzes.</p>'
     const attempts = history.length
     const average = attempts ? Math.round(history.reduce((sum, item) => sum + item.percent, 0) / attempts) : 0
@@ -182,6 +226,10 @@ Flashcards.afterDOMLoaded = `
     if (!quiz) return
     clearInterval(timer)
     const percent = Math.round((quiz.correct / quiz.total) * 100)
+    quiz.questions.forEach((question) => {
+      const personal = cards.find((card) => card.term === question.term)
+      if (personal) personal.queued = false
+    })
     history.unshift({ date: new Date().toISOString(), correct: quiz.correct, total: quiz.total, percent })
     history = history.slice(0, 20)
     save()
@@ -264,8 +312,11 @@ Flashcards.afterDOMLoaded = `
   byId("flashcards-start").addEventListener("click", () => {
     const mode = difficulty[byId("flashcards-difficulty").value]
     const topic = byId("flashcards-topic").value
-    const pool = allCards().filter((card) => topic === "all" || (card.tags || []).includes(topic)).sort(() => Math.random() - 0.5)
-    quiz = { questions: pool.slice(0, Math.min(mode.count, pool.length)), index: 0, correct: 0, total: Math.min(mode.count, pool.length), remaining: mode.seconds }
+    const pool = allCards().filter((card) => topic === "all" || (card.tags || []).includes(topic))
+    const queued = pool.filter((card) => card.queued)
+    const remaining = pool.filter((card) => !card.queued).sort(() => Math.random() - 0.5)
+    const questions = queued.concat(remaining).slice(0, Math.min(mode.count, pool.length))
+    quiz = { questions, index: 0, correct: 0, total: questions.length, remaining: mode.seconds }
     byId("flashcards-results").hidden = true
     byId("flashcards-setup").hidden = true
     byId("flashcards-quiz").hidden = false
@@ -322,6 +373,7 @@ Flashcards.css = `
 .flashcard-item { display: flex; align-items: start; justify-content: space-between; gap: 1rem; border-bottom: 1px solid var(--lightgray); padding-bottom: .65rem; }
 .flashcard-item p { margin: .2rem 0; font-size: .9rem; }
 .flashcard-item small { color: var(--secondary); }
+.flashcard-queued { display: inline-block; border-radius: 999px; background: color-mix(in srgb, var(--tertiary) 14%, var(--light)); color: var(--tertiary); font-size: .7rem; font-weight: 700; margin-left: .35rem; padding: .12rem .45rem; vertical-align: middle; }
 .flashcard-item button { border: 0; background: transparent; color: var(--gray); cursor: pointer; font-size: .8rem; }
 .flashcards-quiz-panel { margin-top: 1rem; }
 .flashcards-setup { display: flex; align-items: end; gap: 1rem; }
@@ -330,6 +382,12 @@ Flashcards.css = `
 .flashcards-quiz-meta strong { color: var(--secondary); }
 .flashcards-quiz h4 { font-size: 1.4rem; margin-bottom: 1rem; }
 .flashcards-score { color: var(--secondary); font-size: 3rem; font-weight: 700; margin: .5rem 0; }
+.dictionary-quiz-button { border: 1px solid color-mix(in srgb, var(--secondary) 30%, var(--lightgray)); border-radius: 999px; background: color-mix(in srgb, var(--secondary) 7%, var(--light)); color: var(--secondary); cursor: pointer; font: inherit; font-size: .72rem; font-weight: 700; margin-left: .55rem; padding: .2rem .6rem; vertical-align: middle; }
+.dictionary-quiz-button:hover, .dictionary-quiz-button:focus-visible { background: var(--secondary); color: white; }
+.dictionary-quiz-button.is-added { animation: dictionary-card-added .7s ease; background: var(--tertiary); border-color: var(--tertiary); color: white; }
+.dictionary-term-added { animation: dictionary-term-pulse .7s ease; }
+@keyframes dictionary-card-added { 0% { transform: scale(1); } 45% { transform: scale(1.12) rotate(-2deg); } 100% { transform: scale(1); } }
+@keyframes dictionary-term-pulse { 0% { color: inherit; } 45% { color: var(--tertiary); } 100% { color: inherit; } }
 @media all and (max-width: 800px) { .flashcards-header, .flashcards-setup { align-items: stretch; flex-direction: column; } .flashcards-grid { grid-template-columns: 1fr; } .flashcards-stat { text-align: left; } .flashcards-panel-heading { align-items: flex-start; flex-direction: column; } .flashcards-panel-actions { width: 100%; } }
 `
 
