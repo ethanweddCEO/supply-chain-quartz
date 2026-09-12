@@ -10,18 +10,18 @@ aliases:
 
 # Supply Chain Dictionary
 
-> [!tip] Search-first reference
-> Search a term above, or start with a topic below. This dictionary turns working Obsidian notes into a practical supply-chain learning reference.
+> [!tip] FIELD GUIDE / SEARCH-FIRST REFERENCE
+> Find the term, system, or decision you need. This dictionary turns working Obsidian notes into a practical supply-chain learning reference.
 
-Welcome to the **Supply Chain Dictionary**: a working reference for the concepts, systems, and decisions that keep supply networks moving.
+Welcome to the **Supply Chain Dictionary** — a practical field guide for the concepts, systems, and decisions that keep supply networks moving. Use it when you need a clear definition, a useful connection, or a better next question.
 
-## Browse the dictionary
+## Start with the right move
 
-- [[Merit America Supply Chain/The Supply Chain Dictionary Home/Supply Chain Dictionary/Supply Chain Dictionary|Dictionary home]]
-- [[Glossary|Featured glossary]]
-- [[Flashcards|Flashcards]]
+- **Need a definition?** Start with the [[Glossary|glossary]] and follow the links beneath each term.
+- **Trying to understand a function?** Choose a [[Purchasing|topic guide]] below and move from concept to practice.
+- **Preparing for a quiz?** Build a personal deck in [[Flashcards|flashcards]] and grade your own recall.
 
-### Topics
+## The operating map
 
 - [[Purchasing|Purchasing]]
 - [[Procurement|Procurement]]
@@ -30,20 +30,22 @@ Welcome to the **Supply Chain Dictionary**: a working reference for the concepts
 - [[Supplier Management|Supplier management]]
 - [[Strategic Sourcing|Strategic sourcing]]
 
-## How to use this site
+## A dependable path through the network
 
-Use **Search** to find a term, the **Dictionary explorer** to browse by topic, and the tags on each page to discover related concepts. Notes remain editable in Obsidian and are published here without changing the source workflow.
+**01 — Locate.** Use Search to find a term, system, or decision.
 
-## Learn with intent
+**02 — Connect.** Use the Dictionary explorer, tags, backlinks, and topic guides to see where it fits.
 
-1. Start with the [[Glossary]] for concise definitions.
-2. Follow a topic into the longer class notes.
-3. Save difficult terms in [[Flashcards]] and run a timed quiz.
+**03 — Apply.** Open the examples, then save difficult terms in [[Flashcards]] for deliberate practice.
 
-## Featured concepts
+Notes remain editable in Obsidian and publish here without changing the source workflow.
+
+## Signals worth knowing
 
 - [[Safety stock]] protects service levels when demand or supply is uncertain.
 - [[Lead time]] connects a decision today with the date supply becomes available.
 - [[Total cost of ownership]] keeps sourcing decisions from focusing only on unit price.
+
+---
 
 [[About|About the dictionary]] · [[Resources|Resources and references]]

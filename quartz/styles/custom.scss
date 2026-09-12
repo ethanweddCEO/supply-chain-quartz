@@ -3,6 +3,11 @@
 // Enterprise documentation styling built on Quartz's existing component markup.
 :root {
   --content-max-width: 72rem;
+  --scd-ink: #102a43;
+  --scd-navy: #173f5f;
+  --scd-signal: #ef8354;
+  --scd-teal: #2a9d8f;
+  --scd-paper: #fffdf8;
 }
 
 body {
@@ -87,14 +92,29 @@ body {
   min-height: 2.5rem;
   border: 1px solid var(--lightgray);
   border-radius: 0.6rem;
-  background: var(--light);
-  color: var(--darkgray);
-  box-shadow: 0 1px 2px rgb(15 23 42 / 0.06);
+  background: var(--scd-ink);
+  color: white;
+  box-shadow: 0 0.35rem 1rem rgb(16 42 67 / 0.18);
+  font-weight: 700;
 }
 
 .search > .search-button:hover {
-  border-color: var(--secondary);
-  background: color-mix(in srgb, var(--secondary) 4%, var(--light));
+  border-color: var(--scd-signal);
+  background: var(--scd-navy);
+}
+
+.page > #quartz-body .left .page-title {
+  border-left: 3px solid var(--scd-signal);
+  padding-left: 0.75rem;
+  color: var(--scd-ink);
+  font-size: 0.9rem;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+  text-transform: uppercase;
+}
+
+.page > #quartz-body .left .page-title a {
+  color: inherit;
 }
 
 .search > .search-container > .search-space > input {
@@ -165,6 +185,126 @@ a.tag-link:hover {
   font-size: 0.85rem;
 }
 
+// The landing page is the product surface: give it a visual language of routes,
+// signals, and field notes without changing Quartz's document architecture.
+body[data-slug="index"] {
+  background:
+    linear-gradient(135deg, rgb(23 63 95 / 0.06) 0 1px, transparent 1px 100%),
+    linear-gradient(45deg, rgb(239 131 84 / 0.04) 0 1px, transparent 1px 100%), var(--scd-paper);
+  background-size:
+    28px 28px,
+    28px 28px,
+    auto;
+}
+
+body[data-slug="index"] .center > article .markdown-rendered {
+  max-width: 58rem;
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > h1:first-child {
+  position: relative;
+  border-bottom: 0;
+  margin-top: 1.5rem;
+  padding: 2.75rem 0 1.5rem;
+  color: var(--scd-ink);
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: -0.065em;
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > h1:first-child::before {
+  display: block;
+  margin-bottom: 1.25rem;
+  color: var(--scd-signal);
+  content: "SUPPLY NETWORK / FIELD GUIDE";
+  font-family: var(--codeFont);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > h1:first-child::after {
+  width: 6rem;
+  height: 0.35rem;
+  margin-top: 1.25rem;
+  border-radius: 0;
+  background: linear-gradient(90deg, var(--scd-signal) 0 35%, var(--scd-teal) 35% 100%);
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > blockquote {
+  position: relative;
+  border: 1px solid rgb(23 63 95 / 0.14);
+  border-left: 0;
+  border-radius: 0.25rem;
+  background: rgb(255 253 248 / 0.9);
+  box-shadow: 0 1rem 2.5rem rgb(16 42 67 / 0.08);
+  padding: 1.25rem 1.5rem 1.25rem 4.25rem;
+  color: var(--scd-ink);
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > blockquote::before {
+  position: absolute;
+  top: 1.1rem;
+  left: 1.5rem;
+  color: var(--scd-signal);
+  content: "↗";
+  font-family: var(--codeFont);
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > h2 {
+  margin-top: 3.25rem;
+  border-bottom: 0;
+  color: var(--scd-ink);
+  font-size: 1.55rem;
+  letter-spacing: -0.025em;
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > h2::before {
+  margin-right: 0.6rem;
+  color: var(--scd-signal);
+  content: "—";
+  font-family: var(--codeFont);
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > ul:first-of-type,
+body[data-slug="index"] .center > article .markdown-rendered > ul:nth-of-type(2) {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.75rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > ul:first-of-type li,
+body[data-slug="index"] .center > article .markdown-rendered > ul:nth-of-type(2) li {
+  margin: 0;
+  border-top: 3px solid var(--scd-teal);
+  background: rgb(255 253 248 / 0.88);
+  box-shadow: 0 0.5rem 1.5rem rgb(16 42 67 / 0.06);
+  padding: 1rem;
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > ul:first-of-type li::before,
+body[data-slug="index"] .center > article .markdown-rendered > ul:nth-of-type(2) li::before {
+  display: none;
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > ul:first-of-type a,
+body[data-slug="index"] .center > article .markdown-rendered > ul:nth-of-type(2) a {
+  color: var(--scd-navy);
+  font-weight: 700;
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > p strong {
+  color: var(--scd-navy);
+}
+
+body[data-slug="index"] .center > article .markdown-rendered > hr {
+  border-color: rgb(23 63 95 / 0.18);
+  margin-top: 3rem;
+}
+
 @media all and ($mobile) {
   .page > #quartz-body .sidebar {
     padding-left: 0;
@@ -181,5 +321,19 @@ a.tag-link:hover {
 
   .center > article {
     padding: 0 0.25rem;
+  }
+
+  body[data-slug="index"] .center > article .markdown-rendered > h1:first-child {
+    padding-top: 1.5rem;
+    font-size: clamp(2.35rem, 13vw, 3.5rem);
+  }
+
+  body[data-slug="index"] .center > article .markdown-rendered > ul:first-of-type,
+  body[data-slug="index"] .center > article .markdown-rendered > ul:nth-of-type(2) {
+    grid-template-columns: 1fr;
+  }
+
+  body[data-slug="index"] .center > article .markdown-rendered > blockquote {
+    padding-left: 3.25rem;
   }
 }
