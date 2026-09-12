@@ -2,6 +2,15 @@
 publish: true
 created: 2026-08-27T18:16:22.114-07:00
 modified: 2026-09-01T23:43:56.782-07:00
+title: ERP, MRP, and Supply Planning
+description: A practical overview of ERP, MRP, master data, dynamic files, net requirements, and MRP action messages.
+tags:
+  - supply-chain
+  - planning
+  - ERP
+  - MRP
+aliases:
+  - Supply Planning
 ---
 
 > [!NOTE] Was late
@@ -24,7 +33,7 @@ Make sure everyone knows what theyre doing and make sure that get communicated t
 > 1.Internal interfaces
 > ERP systemns - po history, suipplier databases, performance measurement
 > 2\. Externalk supplier interfaces
-> 1\. Internet / EDI links - real time POs, logistics, payment, collaborative,  design portals
+> 1\. Internet / EDI links - real time POs, logistics, payment, collaborative, design portals
 > 3\. SRM analyitcs
 > 1\. Spend alaysis, RFQ analysis, scorecard & rejection log data - both in one place
 > 4\. SRM Services

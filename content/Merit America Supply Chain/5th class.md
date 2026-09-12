@@ -2,6 +2,15 @@
 publish: true
 created: 2026-09-01T16:58:10.787-07:00
 modified: 2026-09-03T17:41:36.006-07:00
+title: Strategic Sourcing and Total Cost
+description: Notes on strategic sourcing, holding cost, tactical purchasing, and total-cost decision making.
+tags:
+  - supply-chain
+  - sourcing
+  - procurement
+  - total-cost
+aliases:
+  - Strategic Sourcing
 ---
 
 > [!NOTE] Static Files

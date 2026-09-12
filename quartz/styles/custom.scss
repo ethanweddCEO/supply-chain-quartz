@@ -1,3 +1,141 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Enterprise documentation styling built on Quartz's existing component markup.
+:root {
+  --content-max-width: 72rem;
+}
+
+body {
+  letter-spacing: 0.005em;
+}
+
+.page {
+  max-width: var(--content-max-width);
+}
+
+.page > #quartz-body {
+  column-gap: 2rem !important;
+  row-gap: 1rem !important;
+}
+
+.page > #quartz-body .sidebar {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.page > #quartz-body .page-header {
+  margin-top: 3rem;
+}
+
+.center > article {
+  max-width: 48rem;
+}
+
+.center > article p,
+.center > article li {
+  line-height: 1.75rem;
+}
+
+.search {
+  width: 100%;
+  max-width: 22rem;
+}
+
+.search > .search-button {
+  min-height: 2.5rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 0.6rem;
+  background: var(--light);
+  color: var(--darkgray);
+  box-shadow: 0 1px 2px rgb(15 23 42 / 0.06);
+}
+
+.search > .search-button:hover {
+  border-color: var(--secondary);
+  background: color-mix(in srgb, var(--secondary) 4%, var(--light));
+}
+
+.search > .search-container > .search-space > input {
+  min-height: 3rem;
+  border-radius: 0.6rem;
+  box-shadow: 0 14px 50px rgb(15 23 42 / 0.14);
+}
+
+.search > .search-container > .search-space > input:focus {
+  border-color: var(--secondary);
+  outline: 2px solid color-mix(in srgb, var(--secondary) 20%, transparent);
+}
+
+.tags,
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.tags a,
+.tag-list a,
+a.tag-link {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid color-mix(in srgb, var(--secondary) 25%, var(--lightgray));
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--secondary) 8%, var(--light));
+  padding: 0.2rem 0.65rem;
+  color: var(--secondary);
+  font-size: 0.82rem;
+  line-height: 1.2rem;
+}
+
+.tags a:hover,
+.tag-list a:hover,
+a.tag-link:hover {
+  background: color-mix(in srgb, var(--secondary) 16%, var(--light));
+  color: var(--secondary);
+}
+
+.backlinks,
+.toc,
+.graph {
+  border-top: 2px solid var(--lightgray);
+  padding-top: 0.75rem;
+}
+
+.backlinks > h3,
+.toc > summary > h3,
+.graph > h3 {
+  color: var(--dark);
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.graph > .graph-outer {
+  border-color: var(--lightgray);
+  border-radius: 0.6rem;
+  background: color-mix(in srgb, var(--secondary) 3%, var(--light));
+}
+
+.explorer {
+  font-size: 0.92rem;
+}
+
+@media all and ($mobile) {
+  .page > #quartz-body .sidebar {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  .page > #quartz-body .page-header {
+    margin-top: 1.5rem;
+  }
+
+  .search {
+    max-width: none;
+  }
+
+  .center > article {
+    padding: 0 0.25rem;
+  }
+}

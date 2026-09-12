@@ -1,7 +1,7 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: Quartz 5
-  pageTitleSuffix: ""
+  pageTitle: Supply Chain Dictionary
+  pageTitleSuffix: " | Supply Chain Dictionary"
   enableSPA: true
   enablePopovers: true
   analytics:
@@ -16,30 +16,30 @@ configuration:
     fontOrigin: googleFonts
     cdnCaching: true
     typography:
-      header: Schibsted Grotesk
-      body: Source Sans Pro
+      header: Inter
+      body: Inter
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#f8fafc"
+        lightgray: "#e2e8f0"
+        gray: "#94a3b8"
+        darkgray: "#475569"
+        dark: "#0f172a"
+        secondary: "#0f5ea8"
+        tertiary: "#0b7a75"
+        highlight: rgba(15, 94, 168, 0.1)
+        textHighlight: "#fef08a88"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#0f172a"
+        lightgray: "#334155"
+        gray: "#64748b"
+        darkgray: "#cbd5e1"
+        dark: "#f8fafc"
+        secondary: "#60a5fa"
+        tertiary: "#2dd4bf"
+        highlight: rgba(15, 94, 168, 0.1)
+        textHighlight: "#facc1588"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -83,6 +83,7 @@ plugins:
     layout:
       position: right
       priority: 30
+      display: desktop-only
   - source: "@quartz-community/crawl-links"
     enabled: true
     options:
@@ -159,16 +160,45 @@ plugins:
     enabled: true
   - source: "@quartz-community/explorer"
     enabled: true
+    options:
+      title: Dictionary explorer
+      folderDefaultState: collapsed
+      folderClickBehavior: link
+      useSavedState: true
     layout:
       position: left
       priority: 50
   - source: "@quartz-community/graph"
     enabled: true
+    options:
+      localGraph:
+        depth: 1
+        scale: 1
+        repelForce: 0.65
+        centerForce: 0.35
+        linkDistance: 38
+        fontSize: 0.65
+        opacityScale: 0.9
+        showTags: false
+      globalGraph:
+        scale: 0.85
+        repelForce: 0.65
+        centerForce: 0.25
+        linkDistance: 38
+        fontSize: 0.65
+        opacityScale: 0.9
+        showTags: false
     layout:
       position: right
       priority: 10
   - source: "@quartz-community/search"
     enabled: true
+    options:
+      enablePreview: true
+      fieldPriority:
+        - title
+        - tags
+        - content
     layout:
       position: left
       priority: 20
@@ -191,10 +221,11 @@ plugins:
       position: beforeBody
       priority: 20
   - source: "@quartz-community/tag-list"
-    enabled: false
+    enabled: true
     layout:
       position: beforeBody
       priority: 30
+      condition: has-tags
   - source: "@quartz-community/page-title"
     enabled: true
     layout:
@@ -230,8 +261,8 @@ plugins:
     enabled: true
     options:
       links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
+        Home: /
+
     layout:
       position: footer
       priority: 50
@@ -266,132 +297,6 @@ plugins:
       position: beforeBody
       priority: 15
       display: all
-  - source: "@quartz-community/obsidian-plugin-excalidraw"
-    enabled: true
-    options:
-      enableInteraction: true
-      darkMode: auto
-      exportPadding: 20
-    order: 50
-  - source: github:quartz-community/explorer
-    enabled: true
-    options:
-      folderDefaultState: collapsed
-      folderClickBehavior: link
-      useSavedState: true
-    order: 50
-    layout:
-      position: left
-      priority: 50
-  
-  - source: github:satche/quartz-navbar
-    enabled: true
-    options:
-      links:
-        - label: Home
-          href: /
-        - label: Supply Chain
-          href: "/Merit America Supply Chain"
-    order: 50
-    layout:
-      position: header
-      priority: 50
-  - source: github:quartz-community/explorer
-    enabled: true
-    options:
-      folderDefaultState: collapsed
-      folderClickBehavior: link
-      useSavedState: true
-    order: 50
-    layout:
-      position: left
-      priority: 50
-  - source: github:quartz-community/content-index
-    enabled: true
-    options:
-      enableSiteMap: true
-      enableRSS: true
-      rssLimit: 10
-      rssFullHtml: false
-      rssSlug: index
-      includeEmptyFiles: true
-    order: 50
-  - source: github:quartz-community/spacer
-    enabled: true
-    options: {}
-    order: 15
-    layout:
-      position: left
-      priority: 15
-  - source: github:quartz-community/og-image
-    enabled: true
-    options:
-      colorScheme: lightMode
-      width: 1200
-      height: 630
-      excludeRoot: false
-      defaultTitle: Untitled
-      defaultDescription: No description provided
-    order: 50
-  - source: github:quartz-community/footer
-    enabled: true
-    options:
-      links:
-        GitHub: https://github.com/jackyzha0/quartz
-        Discord Community: https://discord.gg/cRFFHYye7t
-    order: 50
-  - source: github:quartz-community/bases-page
-    enabled: true
-    options:
-      defaultViewType: table
-      linkResolution: shortest
-    order: 50
-  - source: github:quartz-community/search
-    enabled: true
-    options:
-      enablePreview: true
-      fieldPriority:
-        - title
-        - content
-        - tags
-    order: 50
-    layout:
-      position: left
-      priority: 20
-  - source: github:quartz-community/hard-line-breaks
-    enabled: false
-    options: {}
-    order: 90
-  - source: github:quartz-community/fonts
-    enabled: true
-    options:
-      useThemeFonts: true
-      fontOrigin: googleFonts
-    order: 60
-  - source: github:quartz-community/folder-page
-    enabled: true
-    options:
-      showFolderCount: true
-      showSubfolders: true
-    order: 50
-  - source: github:quartz-community/crawl-links
-    enabled: true
-    options:
-      markdownLinkResolution: absolute
-      prettyLinks: true
-      openLinksInNewTab: false
-      lazyLoad: false
-      externalLinkIcon: true
-      disableBrokenWikilinks: false
-    order: 60
-  - source: github:quartz-community/backlinks
-    enabled: true
-    options:
-      hideWhenEmpty: true
-    order: 50
-    layout:
-      position: right
-      priority: 30
 layout:
   groups:
     toolbar:
