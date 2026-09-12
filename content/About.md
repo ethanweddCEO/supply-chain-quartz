@@ -4,8 +4,6 @@ description: How the Supply Chain Dictionary is organized, maintained, and inten
 tags:
   - about
   - start-here
-aliases:
-  - About
 ---
 
 # About the Supply Chain Dictionary
