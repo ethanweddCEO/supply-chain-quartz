@@ -168,29 +168,6 @@ plugins:
     layout:
       position: left
       priority: 50
-  - source: "@quartz-community/graph"
-    enabled: true
-    options:
-      localGraph:
-        depth: 1
-        scale: 1
-        repelForce: 0.65
-        centerForce: 0.35
-        linkDistance: 38
-        fontSize: 0.65
-        opacityScale: 0.9
-        showTags: false
-      globalGraph:
-        scale: 0.85
-        repelForce: 0.65
-        centerForce: 0.25
-        linkDistance: 38
-        fontSize: 0.65
-        opacityScale: 0.9
-        showTags: false
-    layout:
-      position: right
-      priority: 10
   - source: "@quartz-community/search"
     enabled: true
     options:
@@ -257,6 +234,11 @@ plugins:
     layout:
       position: afterBody
       priority: 10
+  - source: "./quartz/plugins/flashcards"
+    enabled: true
+    layout:
+      position: afterBody
+      priority: 40
   - source: "@quartz-community/footer"
     enabled: true
     options:

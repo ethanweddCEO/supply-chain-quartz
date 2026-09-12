@@ -1,0 +1,27 @@
+{
+  "name": "supply-chain-dictionary-flashcards",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./index.js",
+  "exports": {
+    ".": "./index.js",
+    "./components": "./components.js"
+  },
+  "quartz": {
+    "name": "supply-chain-dictionary-flashcards",
+    "displayName": "Supply Chain Flashcards",
+    "description": "Browser-local flashcards and timed quizzes for the Supply Chain Dictionary.",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "components": {
+      "Flashcards": {
+        "name": "supply-chain-dictionary-flashcards",
+        "displayName": "Supply Chain Flashcards",
+        "description": "Browser-local flashcards and timed quizzes.",
+        "version": "1.0.0"
+      }
+    }
+  }
+}
+

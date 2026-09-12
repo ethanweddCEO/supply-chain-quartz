@@ -6,6 +6,12 @@
 }
 
 body {
+  background: linear-gradient(
+      180deg,
+      color-mix(in srgb, var(--secondary) 4%, var(--light)) 0,
+      var(--light) 22rem
+    )
+    fixed;
   letter-spacing: 0.005em;
 }
 
@@ -31,9 +37,40 @@ body {
   max-width: 48rem;
 }
 
+.center > article > h1:first-child {
+  border-bottom: 1px solid var(--lightgray);
+  margin-top: 0.75rem;
+  padding-bottom: 1rem;
+  letter-spacing: -0.035em;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.08;
+}
+
+.center > article > h1:first-child::after {
+  display: block;
+  width: 3rem;
+  height: 0.25rem;
+  margin-top: 1rem;
+  border-radius: 999px;
+  background: var(--tertiary);
+  content: "";
+}
+
+.center > article > h2 {
+  border-bottom: 1px solid color-mix(in srgb, var(--lightgray) 70%, transparent);
+  padding-bottom: 0.45rem;
+}
+
 .center > article p,
 .center > article li {
   line-height: 1.75rem;
+}
+
+.center > article blockquote {
+  border-left-width: 4px;
+  border-radius: 0 0.5rem 0.5rem 0;
+  background: color-mix(in srgb, var(--secondary) 5%, var(--light));
+  padding: 0.75rem 1rem;
 }
 
 .search {
@@ -95,15 +132,13 @@ a.tag-link:hover {
 }
 
 .backlinks,
-.toc,
-.graph {
+.toc {
   border-top: 2px solid var(--lightgray);
   padding-top: 0.75rem;
 }
 
 .backlinks > h3,
-.toc > summary > h3,
-.graph > h3 {
+.toc > summary > h3 {
   color: var(--dark);
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -111,14 +146,13 @@ a.tag-link:hover {
   font-weight: 700;
 }
 
-.graph > .graph-outer {
-  border-color: var(--lightgray);
-  border-radius: 0.6rem;
-  background: color-mix(in srgb, var(--secondary) 3%, var(--light));
-}
-
 .explorer {
   font-size: 0.92rem;
+}
+
+.page-footer {
+  border-top: 1px solid var(--lightgray);
+  padding-top: 1rem;
 }
 
 @media all and ($mobile) {
