@@ -1,0 +1,17 @@
+{
+    "chat.tools.terminal.autoApprove": {
+        "npx prettier": true,
+        "npx tsc": true,
+        "npx quartz": true,
+        "npx tsx": true,
+        "npx esbuild": true,
+        "Get-Item": true,
+        "ConvertFrom-Json": true,
+        "git rev-list": true,
+        "npm run install-plugins": true,
+        "git rev-parse": true,
+        "git add": true,
+        "git commit": true,
+        "git push": true
+    }
+}
