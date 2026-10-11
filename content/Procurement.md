@@ -24,8 +24,8 @@ Procurement manages the full commercial and operational process of acquiring goo
 
 ## Related terms
 
-- [[Purchasing]]
+- [[dictionary/Purchasing]]
 - [[Strategic Sourcing|Strategic sourcing]]
 - [[Supplier Management|Supplier relationship management]]
-- [[Glossary#Total cost of ownership|Total cost of ownership]]
-- [[Glossary#Purchase order|Purchase order]]
+- [[dictionary/Total cost of ownership|Total cost of ownership]]
+- [[dictionary/Purchase order|Purchase order]]

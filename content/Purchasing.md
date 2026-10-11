@@ -21,11 +21,11 @@ Purchasing turns an approved need into an order that a supplier can fulfill. Str
 
 ## Core terms
 
-- [[Procurement]]
-- [[Glossary#Purchase order|Purchase order]]
-- [[Glossary#Approved vendor list|Approved vendor list]]
-- [[Glossary#Lead time|Lead time]]
-- [[Glossary#Three-way match|Three-way match]]
+- [[dictionary/Procurement]]
+- [[dictionary/Purchase order|Purchase order]]
+- [[dictionary/Approved vendor list|Approved vendor list]]
+- [[dictionary/Lead time|Lead time]]
+- [[dictionary/Three-way match|Three-way match]]
 
 ## Related class notes
 

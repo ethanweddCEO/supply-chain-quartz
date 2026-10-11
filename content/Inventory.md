@@ -15,12 +15,12 @@ Inventory is the stock held between supply and demand. It improves availability,
 
 ## Core terms
 
-- [[Glossary#Safety stock|Safety stock]]
-- [[Glossary#Cycle stock|Cycle stock]]
-- [[Glossary#Holding cost|Holding cost]]
-- [[Glossary#Reorder point|Reorder point]]
-- [[Glossary#Economic order quantity|Economic order quantity]]
-- [[Glossary#Lead time|Lead time]]
+- [[dictionary/Safety stock|Safety stock]]
+- [[dictionary/Cycle stock|Cycle stock]]
+- [[dictionary/Holding cost|Holding cost]]
+- [[dictionary/Reorder point|Reorder point]]
+- [[dictionary/Economic order quantity|Economic order quantity]]
+- [[dictionary/Lead time|Lead time]]
 
 ## Key trade-off
 
