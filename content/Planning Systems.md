@@ -17,11 +17,11 @@ Planning systems convert demand and supply information into actionable timing an
 
 ## Core terms
 
-- [[Glossary#ERP|ERP]]
-- [[Glossary#MRP|MRP]]
-- [[Glossary#Net requirements|Net requirements]]
-- [[Glossary#Projected available balance|Projected available balance]]
-- [[Glossary#Lead time|Lead time]]
+- [[dictionary/ERP|ERP]]
+- [[dictionary/MRP|MRP]]
+- [[dictionary/Net requirements|Net requirements]]
+- [[dictionary/Projected available balance|Projected available balance]]
+- [[dictionary/Lead time|Lead time]]
 
 ## Planning sequence
 

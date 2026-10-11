@@ -17,11 +17,11 @@ Supplier management aligns internal stakeholders and suppliers around performanc
 
 ## Core terms
 
-- [[Glossary#SRM|Supplier relationship management]]
-- [[Glossary#Approved vendor list|Approved vendor list]]
-- [[Glossary#Supplier scorecard|Supplier scorecard]]
-- [[Strategic sourcing]]
-- [[Glossary#Total cost of ownership|Total cost of ownership]]
+- [[dictionary/SRM|Supplier relationship management]]
+- [[dictionary/Approved vendor list|Approved vendor list]]
+- [[dictionary/Supplier scorecard|Supplier scorecard]]
+- [[dictionary/Strategic sourcing]]
+- [[dictionary/Total cost of ownership|Total cost of ownership]]
 
 ## Related notes
 

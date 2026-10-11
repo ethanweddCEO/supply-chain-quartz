@@ -25,10 +25,10 @@ Strategic sourcing evaluates suppliers and commercial choices beyond the quoted 
 
 ## Related terms
 
-- [[Procurement]]
-- [[Glossary#Holding cost|Holding cost]]
+- [[dictionary/Procurement]]
+- [[dictionary/Holding cost|Holding cost]]
 - [[Supplier management]]
-- [[Glossary#Total cost of ownership|Total cost of ownership]]
+- [[dictionary/Total cost of ownership|Total cost of ownership]]
 
 ## Related note
 

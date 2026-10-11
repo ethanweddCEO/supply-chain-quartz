@@ -42,9 +42,9 @@ The source remains in Obsidian. The published dictionary is the working layer: s
 
 ## Signals worth knowing
 
-- [[Safety stock]] protects service levels when demand or supply is uncertain.
-- [[Lead time]] connects a decision today with the date supply becomes available.
-- [[Total cost of ownership]] keeps sourcing decisions from focusing only on unit price.
+- [[dictionary/Safety stock]] protects service levels when demand or supply is uncertain.
+- [[dictionary/Lead time]] connects a decision today with the date supply becomes available.
+- [[dictionary/Total cost of ownership]] keeps sourcing decisions from focusing only on unit price.
 
 ## Built for the handoff
 
